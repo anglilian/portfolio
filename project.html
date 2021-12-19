@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ang Li-Lian</title>
+    <meta name="description" content="Portfolio for a designer, educator, coder, writer looking for opportunities for social impact!">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/android-chrome-512x512.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" href="https://use.typekit.net/veq0tie.css">
+    <link rel="stylesheet" href="assets/css/Social-Icons-1.css">
+    <link rel="stylesheet" href="assets/css/Social-Icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/typewriter.css">
+</head>
+
+<body style="text-align: center;">
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="navbar-brand" href="index.html"><img src="assets/img/logo-03.png" style="width: 15rem;padding-left: 5%;"></a></li>
+            </ul><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-end" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="project.html" onclick="clickMe(&#39;all&#39;)">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="btn-container" class="space" style="padding-top: 45px;">
+        <div class="container">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-xxl-6 row-cols-sm-3 row-cols-md-6 row-cols-lg-4 row-cols-xl-6" style="justify-content: center;">
+                <div class="col-md-3"><button class="btn category-button" id="all" type="button" style="border-color: #000000;color: #000000;" onclick="filterSelection(&#39;all&#39;)">ALL</button></div>
+                <div class="col-md-3"><button class="btn category-button" id="coding" type="button" style="color: rgb(255,150,105);border-color: rgb(255,150,105);" onclick="filterSelection(&#39;coding&#39;)">Coding</button></div>
+                <div class="col-md-3"><button class="btn category-button" id="events" type="button" style="border-color: #ff4eb1;color: rgb(255,78,177);" onclick="filterSelection(&#39;events&#39;)">Events</button></div>
+                <div class="col-md-3"><button class="btn category-button" id="writing" type="button" style="border-color: #8d04fb;color: rgb(141,4,251);" onclick="filterSelection(&#39;writing&#39;)">Writing</button></div>
+                <div class="col-md-3"><button class="btn category-button" id="education" type="button" style="border-color: #1D00FF;color: rgb(29,0,255);" onclick="filterSelection(&#39;education&#39;)">Education</button></div>
+                <div class="col-md-3"><button class="btn category-button" id="digital-art" type="button" style="color: rgb(0,0,144);border-color: rgb(0,0,144);" onclick="filterSelection(&#39;digital-art&#39;)">Digital Art</button></div>
+            </div>
+        </div>
+    </div>
+    <div id="div-container" style="background: #f9f8ed;display: flex;flex-wrap: wrap;justify-content: center;padding-top: 2rem;margin-bottom: 10px;padding-bottom: 2rem;">
+        <div class="center events malaysia education" data-bs-toggle="modal" data-bs-target="#usapps" data-date="202108">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/USApps%20Discord%20Background%202.png&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">USAPPS</h4>
+                <p class="date">Aug 2021</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Malaysia</span></p>
+            </div>
+            <div class="half-bottom bottom-tag right" style="background: #1d00ff;">
+                <p class="category-tag">education</p>
+            </div>
+            <div class="half-bottom bottom-tag left" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center events malaysia" data-bs-toggle="modal" data-bs-target="#rftc" data-date="201508">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/rftc.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Run For the Children</h4>
+                <p class="date">Aug 2015</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Shah Alam, Malaysia</span></p>
+                <p>Leo Club of Sri Kuala Lumpur</p>
+            </div>
+            <div class="bottom-tag" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center events malaysia" data-bs-toggle="modal" data-bs-target="#quidditch" data-date="201608">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/quidditch.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;" data-bs-target="#quidditch" data-bs-toggle="modal"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Leo Quidditch Tournament</h4>
+                <p class="date">Aug 2016</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Subang Jaya, Malaysia</span></p>
+                <p>Leo Club of Sri Kuala Lumpur</p>
+            </div>
+            <div class="bottom-tag">
+                <p class="category-tag" style="background: #ff4eb1;">events</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-target="#cityofstars" data-bs-toggle="modal" data-date="2017">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/cityofstars.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">City of Stars</h4>
+                <p class="date" style="font-weight: 300;">2017</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-toggle="modal" data-bs-target="#ilavayou" data-date="2017">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/I%20Lava%20You.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">I Lava You</h4>
+                <p class="date" style="font-weight: 300;">2017</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-toggle="modal" data-bs-target="#fearthewolves" data-date="2019">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/fearthewolves.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Fear the Wolves</h4>
+                <p class="date" style="font-weight: 300;">2019</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center events education malaysia" data-bs-toggle="modal" data-bs-target="#tutorforkids" data-date="2018">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/tutorforkids.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Tutor For Kids</h4>
+                <p class="date">2018-2020</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Subang Jaya, Malaysia</span></p>
+                <p>Leo Club of Subang Jaya Alumni</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">education</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center events korea" data-bs-toggle="modal" data-bs-target="#link" data-date="2019-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/link.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Fall Masquerade Ball</h4>
+                <p class="date">Nov 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Seoul, South Korea</span></p>
+                <p>Liberty in North Korea</p>
+            </div>
+            <div class="bottom-tag" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center events education malaysia" data-bs-toggle="modal" data-bs-target="#sxsw" data-date="2019-03">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/sxsw.png&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Evolving Higher Ed with Global Student Perspective<br></h4>
+                <p class="date">March 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Texas, USA</span></p>
+                <p>SXSW EDU</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">education</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center education japan" data-bs-toggle="modal" data-bs-target="#manai" data-date="2019-07">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/manai.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Manai Summer Program</h4>
+                <p class="date 201908">July - Aug 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Hokkaido, Japan</span></p>
+                <p>Manai Institute of Science &amp; Technology</p>
+            </div>
+            <div class="bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">science</p>
+            </div>
+        </div>
+        <div class="center education coding malaysia" data-bs-toggle="modal" data-bs-target="#maxis" data-date="2021-08">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/maxis.png&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Misi Jelajah Digital</h4>
+                <p class="date 201908">Aug 2021</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">Malaysia</span></p>
+                <p>Maxis Berhad</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">coding</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #ff9669;">
+                <p class="category-tag">scratch</p>
+            </div>
+        </div>
+        <div class="center writing education korea" data-bs-toggle="modal" data-bs-target="#samgakji" data-date="2019-12">
+            <div class="background-image" style="background:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url(&quot;assets/img/Samgakji%203.png&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Samgakji Stories</h4>
+                <p class="date">Dec 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span><span class="location">&nbsp;Seoul, South Korea</span>&nbsp;</p>
+                <p>Yongsan Legacy</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">history</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center writing education" data-bs-toggle="modal" data-bs-target="#purpleisthenoblestshroud" data-date="202104">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/purple.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Purple is the Noblest Shroud</h4>
+                <p class="date">April 2021</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">history</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center writing" data-bs-toggle="modal" data-bs-target="#skinnybeauty" data-date="2020-03">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/skinnybeauty.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Skinny Beauty</h4>
+                <p class="date">March 2020</p>
+                <p>The Quest</p>
+            </div>
+            <div class="bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center writing" data-bs-toggle="modal" data-bs-target="#genderratio" data-date="2020-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/genderratio.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Gender Ratios at Minerva</h4>
+                <p class="date">Nov 2020</p>
+                <p>The Quest</p>
+            </div>
+            <div class="bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center writing" data-bs-toggle="modal" data-bs-target="#becauseofgender" data-date="2019-10">
+            <div class="background-image" style="background:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) , url(&quot;assets/img/gender.jpg&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Because of Gender</h4>
+                <p class="date">Oct 2019</p>
+                <p>The Quest</p>
+            </div>
+            <div class="bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center writing" data-bs-toggle="modal" data-bs-target="#lonely" data-date="2019-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/lonely.png&quot;) center / cover no-repeat;border-color: F9F8ED;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Have You Ever Felt Lonely?</h4>
+                <p class="date">Nov 2019</p>
+                <p>The Quest</p>
+            </div>
+            <div class="bottom-tag" style="background: #8d04fb;">
+                <p class="category-tag">writing</p>
+            </div>
+        </div>
+        <div class="center coding digital-art" data-bs-toggle="modal" data-bs-target="#seekthetreasure" data-date="2020-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/seekthetreasure.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Seek the Treasure</h4>
+                <p class="date">Oct 2020</p>
+                <p>Creatica Hackathon</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+            <div class="half-bottom left bottom-tag" style="background: #ff9669;">
+                <p class="category-tag">python</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-toggle="modal" data-bs-target="#taleasoldastime" data-date="2017-06">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/taleasoldastime.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Tale as Old as Time</h4>
+                <p class="date 201706" style="font-weight: 300;">June 2017</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center digital-art korea" data-bs-toggle="modal" data-bs-target="#whaleshark" data-date="2019-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/whale%20shark-01.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Whale Shark</h4>
+                <p class="date 201911" style="font-weight: 300;">Nov 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span><span class="location">&nbsp;Seoul, South Korea</span>&nbsp;</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-toggle="modal" data-bs-target="#flowerproject" data-date="2019">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/Flower%20project%20(RED)-01.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Flower Project (Red)</h4>
+                <p class="date 201900" style="font-weight: 300;">2019</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center digital-art" data-bs-toggle="modal" data-bs-target="#leaftype" data-date="2018-04">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/Leaf%20Type%20Face-01.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Leaf Typography</h4>
+                <p class="date 201900" style="font-weight: 300;">April 2018</p>
+            </div>
+            <div class="bottom-tag" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center education digital-art india" data-bs-toggle="modal" data-bs-target="#hyderabad" data-date="2020-04">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/hyderabad.png&quot;) center;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Hyderabad Virtual Historical Walking Tour</h4>
+                <p class="date" style="font-weight: 300;">April 2020</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span><span class="location">Hyderabad, India</span>&nbsp;</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #000090;">
+                <p class="category-tag">A&amp;V production</p>
+            </div>
+            <div class="bottom-tag half-bottom left" style="background:  #1d00ff;">
+                <p class="category-tag">history</p>
+            </div>
+        </div>
+        <div class="center digital-art education germany" data-bs-toggle="modal" data-bs-target="#herosjourney" data-date="2020-11">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/herosjourney.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Hero's Journey</h4>
+                <p class="date" style="font-weight: 300;">Nov 2020</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span><span class="location">&nbsp;Berlin, Germany</span>&nbsp;</p>
+            </div>
+            <div class="half-bottom right bottom-tag" style="background: #1d00ff;">
+                <p class="category-tag">mental health</p>
+            </div>
+            <div class="bottom-tag half-bottom left" style="background: #000090;">
+                <p class="category-tag">illustrator</p>
+            </div>
+        </div>
+        <div class="center events usa" data-bs-toggle="modal" data-bs-target="#blindminervating" data-date="2019-04">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/blindminervating.png&quot;);"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Blind Minervating</h4>
+                <p class="date" style="font-weight: 300;">April 2019</p>
+                <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;<span class="location">San Francisco, USA</span></p>
+            </div>
+            <div class="bottom-tag" style="background: #ff4eb1;">
+                <p class="category-tag">events</p>
+            </div>
+        </div>
+        <div class="center coding digital-art" data-bs-toggle="modal" data-bs-target="#guardian" data-date="2021-01">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url(&quot;assets/img/guardian-2.png&quot;) center;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">GUARDIAN</h4>
+                <p class="date" style="font-weight: 300;">Jan 2021</p>
+                <p>Rose Hacks</p>
+            </div>
+            <div class="bottom-tag half-bottom left" style="background: #ff9669;">
+                <p class="category-tag">flask, API</p>
+            </div>
+            <div class="bottom-tag half-bottom right" style="background: #000090;">
+                <p class="category-tag">figma</p>
+            </div>
+        </div>
+        <div class="center coding" data-bs-toggle="modal" data-bs-target="#textualanalysis" data-date="2020-10">
+            <div class="background-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/text_analysis.png&quot;) center;"></div>
+            <div class="content">
+                <h4 style="font-weight: bold;">Textual Analysis with Taylor Swift &amp; Old Books</h4>
+                <p class="date" style="font-weight: 300;">Oct 2020 &amp; May 2021</p>
+            </div>
+            <div class="bottom-tag" style="background: #ff9669;">
+                <p class="category-tag">nltk, webscraping, R</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="ilavayou">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/I%20Lava%20You.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">I lava you (2017)<br></h1>
+                    <p>My sister said this to me once and this image popped in my mind, inspired by the Disney short Lava!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="herosjourney">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/herosjourney.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">the hero's journey (2020)<br></h1>
+                    <p>The prompt was to apply the idea of the hero's journey to mental health. To see the journey not as linear, but as cyclical - an downward spiral up.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 left-col"><a href="https://www.expandingcircles.co/" target="_blank"><img class="footer-logo" src="assets/img/ExpandingCircles-Icon.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Expanding circles</h1>
+                                <p style="font-size: 12px;">A non-profit that offers online and in-person therapy to people who do not have access or are not otherwise eligible for mental health services.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="hyderabad">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/JqPU2jZmcWE" width="560" height="315"></iframe>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;width: 50%;left: 0;">
+                        <p>history</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #000090;width: 50%;right: 0;">
+                        <p>audio &amp; video production</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">Hyderabad: The Old City's Journey for Peace (2020)<br></h1>
+                    <div class="box quote-box">
+                        <p class="quote">This is a virtual historical tour through the Old City of Hyderabad. We will be visiting four places — Gulzar Houz, Charminar, Nimrah Cafe and Chowmahalla — to explore Hyderabad’s rocky journey with religion. Perhaps in exploring their conflict, we may be able to apply some of those lessons to our own lives and find harmony within our own differences. So settle in, we’re going on a journey!</p>
+                    </div>
+                    <p style="text-align: justify;">I modelled the tour based on four other historical walking tours I had been on in the past which were all also designed to target foreigners in Hyderabad who had little to no familiarity with its history. I owe a great thanks to my dear friend Ravana Teja (Dheeraj) for a bulk of the inspiration on the design and content of the tour. Although I have done my due diligence in researching the history of Hyderabad as much as possible and incorporating the perspective of my tour guides as locals, I am necessarily tentative about misrepresenting a culture that is not mine. To address this, I have cited my sources within the video and provided a publicly available bibliography.<br><br>With more time, I believe I could have done more justice to Hyderabad’s history. Rich as it is, it deserved illustrations or image and audio based primary sources that better convey the narrative, which I didn’t have time to create or research. If I was still in Hyderabad, I would have attended more walking tours and conducted interviews with locals to uncover stories about Hyderabad and understand which parts of their history is central to them. Nevertheless, I am aware that no single narrative will ever be complete enough and I am grateful for the opportunity to present my interpretation of Hyderabad’s history. <br><br>This walking tour was meant to be in-person, but due to the pandemic, I had to adapt. This project took on a new meaning, to introduce my peers who will not get to experience a semester in Hyderabad the chance to see even just part of its beauty.<br></p>
+                    <p><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="fearthewolves">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/fearthewolves.png" style="width: 50%;"><img class="show-art" src="assets/img/fortheyaremine.png" style="width: 50%">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">Fear the wolves (2018)<br></h1>
+                    <p>I felt this one in my bones and had to get it out there.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="leaftype">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/Leaf%20Type%20Face-01.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">LEaf typography 2019<br></h1>
+                    <p>Born out of my secondary school doodles, I decided to bring the font of my imaginations come to life. For the first time, I joined Type Crit in San Francisco to put my typography up for critique by experts and enthusiasts.</p>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div style="height: 100%"></div>
+                    <div class="text-start"></div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col left-col"><a href="https://www.typethursday.org/san-francisco" target="_blank"><img class="footer-logo" src="assets/img/Tempclipboard-image.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">type thursday</h1>
+                                <p style="font-size: 12px;">TypeThursday is organised by volunteers to support designers in the pursuit of the letterform arts. Each month in cities around the world designers meet, share work-in-progress and learn from each other in a fun social setting.&nbsp;<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="flowerproject">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/Flower%20project%20(RED)-01.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">Flower project (red) (2020)<br></h1>
+                    <p>A friend doodled this flower on my hand once and it itched to drawn. Suffice to say, it was a satisfying itch to scratch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="whaleshark">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/whale%20shark-01.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">Whale Shark (2020)<br></h1>
+                    <p>This piece was a byproduct of my love for whale sharks and Seoul city lights, and my fascination with networks. Presented on a starry night at ArtCon 2019 as a projection.&nbsp;<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="taleasoldastime">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/taleasoldastime.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">Tale as old as time (2017)</h1>
+                    <p>One of my first pieces done in the geometric vector art style. Inspired by the Beauty and the Beast (2017)<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="cityofstars">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header modal-digital-art"><img class="show-art" src="assets/img/cityofstars.png">
+                    <div class="modal-bottom-tag" style="color: rgb(33, 37, 41);background: #000048;">
+                        <p class="category-tag">illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h1 class="art-title">City of stars (2016)</h1>
+                    <p>Inspired by the City of Velaris from Sarah J. Maas’ book series.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="skinnybeauty">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/skinnybeauty.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Skinny Beauty<br></h1>
+                        <p>30 March 2020<br></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #8d04fb;">
+                        <p>writing</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="box quote-box">
+                        <p class="quote">Sometimes I congratulate myself for achieving this social victory. The victory that social media influencers and popular media preach in their #loveyourself campaigns. The victory that admonishments like oi leng moi meng, a Cantonese saying about prioritising life over beauty, celebrates. The victory of body positivity.</p>
+                    </div><a class="btn btn-primary category-button" role="button" style="background: #ffffff;color: #8d04fb;border-color: #8d04fb;" href="https://www.minervaquest.com/2020/03/30/skinny-beauty/" target="_blank">Full Article</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div style="height: 100%"></div>
+                    <div class="text-start"></div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col left-col"><a href="https://www.minervaquest.com/" target="_blank"><img class="footer-logo" src="assets/img/quest.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">The minerva quest</h1>
+                                <p style="font-size: 12px;">The independent, student-produced news source for the Minerva Schools at KGI community and all interested readers<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="purpleisthenoblestshroud">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div><img class="show-art" src="assets/img/wordpress%20banner%20(1).png"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title"></h1>
+                        <p></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #8d04fb;">
+                        <p>writing</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>In the summer of 2020 when COVID-19 hit, I was cloistered at home with little to occupy my time. I'd just completed a virtual walking tour of Hyderabad for my history class and was thinking of making a series of similar videos. But I found an opportunity with the&nbsp;<a href="https://drive.google.com/file/d/1sCYjwNLgzZSi1BUYVaHkV9GLHlERjbGe/view" target="_blank">PEP Fellowship</a> to do just that with guidance! Little did I know that after a call with Eric Koester that I'd find myself taking my first steps on the journey to becoming a published author.&nbsp;<br><br>I hadn't the slightest idea what I would write about, but as I was rewatching&nbsp;<a href="https://www.youtube.com/watch?v=H_2E0RxVHH4&amp;list=PLhyKYa0YJ_5Cfgs7L6XFvcQE_TpyyYiEI" target="_blank">Extra Credits</a> series about Emperor Justinian, I wondered who was his wife? Theodora was spoken of highly and commended vaguely for a score of actions, and I seized upon the spark of curiosity to answer my own question.<br><br>With <a href="https://www.minerva.kgi.edu/people/sonja-ostrow-phd-assistant-professor-arts-and-humanities/" target="_blank">Prof Sonja Ostrow</a> as my coach, I began research in May 2020 and sputtered through writing half of my first draft by the end of the year. I discovered fascinating nuggets about life during Late Antiquity (6th century) and cold-emailed the academics who wrote these papers to flesh out my understanding. <br><br>The new wave of information knocked my entire conception of Theodora sideways, so much so that I rewrote the entire novel in 35 days. I powered through thousands of words a day and spent months after refining it into the nearly 100,000 word behemoth you see today.&nbsp;<br><br>Then came the actual publishing, a world I was even less acquainted with than that of writing. Book covers, historical maps, typesetting, printing, marketing, ISBNs, copyright. These are the lesser known steps between writing and publishing, but they were all exciting, all new frontiers. <br><br>On April 24th 2021, a year after I started along this journey, I became a published author with almost <strong>200 copies sold</strong> to date. It is a modest number for a first-time author, but I miss the research, the writing, the crafting and you can bet there's going to be a sequel!</p>
+                    <div class="quote-box box">
+                        <p style="text-align: center;">EMPRESS OF BZYANTIUM'S GOLDEN AGE.<br><br>Practice. Perform. And practice more.<br><br>Theodora’s life was laid out for her generations before she was born. She would act on the stage until she was no longer beautiful enough and birth daughters who would do exactly as she had. Then, Theodora makes a decision to pursue freedom far from Constantinople. She runs from her fate and stumbles into the arms of the most powerful man in the empire — Emperor Justinian.<br><br>But the imperial court is no place for a woman from the lowest rungs of society. She had been legally barred from leaving the theatre or marrying any man of rank. Yet, she left behind a legacy as the champion of the fallen and the mother of the empire.<br><br>HOW DID SHE DO IT?<br></p>
+                    </div><a class="btn btn-primary category-button" role="button" style="background: #ffffff;color: #8d04fb;border-color: #8d04fb;" href="https://purpleisthenoblestshroud.wordpress.com/" target="_blank">Official Website</a>
+                </div>
+                <div class="modal-footer">
+                    <div class="social-icons"><a href="https://www.instagram.com/lianwritesalot/" target="_blank"><i class="icon ion-social-instagram-outline"></i></a><a href="https://www.amazon.com/dp/9671942709" target="_blank"><i class="fab fa-amazon"></i></a><a href="https://www.goodreads.com/book/show/57027582-purple-is-the-noblest-shroud" target="_blank"><i class="fab fa-goodreads"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="becauseofgender">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/gender.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Because of Gender<br></h1>
+                        <p>8 October 2019<br></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #8d04fb;">
+                        <p>writing</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="box quote-box">
+                        <p>You grew up being complimented based on your looks. “What a pretty child,” they say. “You look like you’ve gotten more beautiful,” they comment. Marks of praise you happily accepted because you felt appreciated, accepted, wanted. Their praise was a mark of achievement, a stamp of approval.<br><br>“You shouldn’t wear vertical stripes because it makes you look fat.”&nbsp;<br><br>“Black is a slimming colour.”&nbsp;<br><br>“Have you gained weight recently?”<br></p>
+                    </div><a class="btn btn-primary category-button" role="button" style="background: #ffffff;color: #8d04fb;border-color: #8d04fb;" href="https://www.minervaquest.com/2019/10/08/because-of-gender/" target="_blank">Full Article</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div style="height: 100%"></div>
+                    <div class="text-start"></div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col left-col"><a href="https://www.minervaquest.com/"><img class="footer-logo" src="assets/img/quest.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">The minerva quest</h1>
+                                <p style="font-size: 12px;">The independent, student-produced news source for the Minerva Schools at KGI community and all interested readers<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="lonely">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/lonely.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Have You Ever Felt Lonely?<br></h1>
+                        <p>5 Nov 2019<br></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #8d04fb;">
+                        <p>writing</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="box quote-box">
+                        <p>Take a look at yourself, surrounded by people. It seems impossible to feel this way, living in a populous city, walking amongst a throng of people on a busy street, existing in a world of seven billion connected by the internet. There is not a day that goes by that you are not in contact with people.<br><br>How could you ever say you were alone?<br></p>
+                    </div><a class="btn btn-primary category-button" role="button" style="background: #ffffff;color: #8d04fb;border-color: #8d04fb;" href="https://www.minervaquest.com/2019/11/05/have-you-ever-felt-lonely/" target="_blank">Full Article</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div style="height: 100%"></div>
+                    <div class="text-start"></div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col left-col"><a href="https://www.minervaquest.com/" target="_blank"><img class="footer-logo" src="assets/img/quest.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">The minerva quest</h1>
+                                <p style="font-size: 12px;">The independent, student-produced news source for the Minerva Schools at KGI community and all interested readers<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="genderratio">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/genderratio.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Gender Ratios at Minerva:<br>Does it Exist? What Does it Mean?<br></h1>
+                        <p>30 November 2019<br></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #8d04fb;">
+                        <p>writing</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="box quote-box">
+                        <p class="quote">Stop and think about the last time you were at a student-run Minerva community event. Online or in-person, doesn’t matter. Are you there yet? I want you to picture it. Who do you see? Your fellow classmates, maybe people from different classes come to mind. But as you take a step back and really observe the scene, you notice something — almost all of the student attendees are women.<br></p>
+                    </div><a class="btn btn-primary category-button" role="button" style="background: #ffffff;color: #8d04fb;border-color: #8d04fb;" href="https://www.minervaquest.com/2020/11/30/gender-ratios-at-minerva-does-it-exist-what-does-it-mean/" target="_blank">Full Article</a>
+                    <figure class="figure" style="margin: 2rem;"><img class="figure-img" src="assets/img/data%20viz.png" style="width: 80%;">
+                        <figcaption class="figure-caption">Visualisation of the gender ratio of leadership and student engagement from each of the 19 currently active student-run organisations.<br></figcaption>
+                    </figure>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div style="height: 100%"></div>
+                    <div class="text-start"></div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col left-col"><a href="https://www.minervaquest.com/" target="_blank"><img class="footer-logo" src="assets/img/quest.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">The minerva quest</h1>
+                                <p style="font-size: 12px;">The independent, student-produced news source for the Minerva Schools at KGI community and all interested readers<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="textualanalysis">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/text_analysis.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title" style="margin: 0px;margin-right: 3rem;margin-left: 3rem;">Textual Analysis with Taylor Swift &amp; Old Books</h1>
+                        <p>Oct 2020 &amp; May 2021</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff9669;">
+                        <p>nltk, webscraping, R</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>I've always loved stories told through books, plays, music, TV series,&nbsp; The question was what could I learn from them when I looked at these stories from a meta-level?<br><br>I started with <strong>R</strong> on a simple hypothesis: <strong>does Taylor Swift really just sing about love?</strong> And if she is singing about love, what kind of love is it?</p>
+                    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" id="carousel-2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/freq_diag.png" alt="Slide Image">
+                                <p>Frequency diagram of the most common words across all Taylor Swift songs for all words that occur more than 40 times.</p>
+                            </div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/sentiment.png" alt="Slide Image">
+                                <p>Sentiment analysis of each of Taylor Swift's albums using three different methods</p>
+                            </div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/wordcloud.png" alt="Slide Image">
+                                <p>Word cloud of the top 100 positive and negative words, where the size of the word relates to the frequency of occurence.</p>
+                            </div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div><a class="btn btn-primary category-button" role="button" style="color: #ff9669;border-color: #ff9669;" href="https://github.com/lianlaughsalot/Taylor-Swift-Lyric-Analysis" target="_blank">taylor swift</a>
+                    <p>Then, I wanted to explore what <strong>Python's NLTK</strong> could do, so I started with the hypothesis: <strong>how long should your sentences be in written work?</strong><br><br>For this, I webscraped Gutenberg's Harvard Classics (129 books) and came up with some beautiful visuals.</p>
+                    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" id="carousel-3">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/text_analysis.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/verb.png" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-3" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-3" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-3" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-3" data-bs-slide-to="1"></li>
+                        </ol>
+                    </div><a class="btn btn-primary category-button" role="button" style="color: #ff9669;border-color: #ff9669;" href="https://github.com/lianlaughsalot/gutenberg-classics" target="_blank">gutenberg</a>
+                    <p>I believe the potential for textual analysis is exciting and these explorations provide me a foundation from which to answer important questions in the future!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="guardian">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/guardian-2.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">GUARDIAN</h1>
+                        <p>January 2021</p>
+                        <p><i class="fa fa-user"></i>&nbsp;UI/UX Designer</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff9669;width: 50%;left: 0;">
+                        <p>flask, REST API, google maps API</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #000090;width: 50%;right: 0;">
+                        <p>figma</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/DPSKJ_KtyBU" width="560" height="315" style="padding-bottom: 15px;padding-top: 15px;width: 100%;"></iframe>
+                    <div class="box quote-box">
+                        <p>GUARDIAN is always by your side. The app is designed to empower women through accessible SOS features, alerts to contacts and quick directions to safe places. With GUARDIAN, you'll never walk alone.<br></p>
+                    </div>
+                    <p>This was the third hackathon I'd ever attended and it was also the second virtual one. I signed up hoping to immerse myself in over 48 hours of learning, of trying and failing, of simply making - little did I know that the project would be awarded <strong>First Place</strong>.<br><br>Our team met for the first time once the hackathon started and we brainstormed, throwing out ideas and scrapping most of them until GUARDIAN emerged. The idea was borne out of a concern that people like me, living outside the US didn't have access to similar apps for safety. But what if we could make the app international? What if we could make it available to women no matter where they resided in the world?<br><br>My role was creating the prototype of the app on <strong>Figma </strong>- everything we hoped the app would be after it was developed. At the same time, my other two teams got cracking on Flutter, attempting to include Google authentication and SMS SOS messages. I joined them in developing a feature that would suggest safe places for the user to go to in times of distress using <strong>Google Maps API</strong> and linked through a <strong>REST API</strong>.<br><br>I slept for fours hours that whole weekend, and it was worth it for all I'd learned, for the friends I'd gained. I only wish I could have met them in person to give them a hug.<br><br>It's still my hope that we fully develop this app and make it available to anyone, anywhere and any time. Fingers crossed!</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6"><a class="btn btn-primary category-button" role="button" style="color: #ff9669;border-color: #ff9669;" href="https://github.com/AliAkberAakash/guardian" target="_blank">Github</a></div>
+                            <div class="col-md-6"><a class="btn btn-primary category-button" role="button" style="color: #000090;border-color: #000090;" href="https://www.figma.com/proto/dUWeaGznbFTMhIwgLJTkdk/Guardian?node-id=47%3A25&amp;scaling=scale-down" target="_blank">Prototype</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://rosehack.com/" target="_blank"><img class="footer-logo" src="assets/img/rosehack.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">rose hack</h1>
+                                <p style="font-size: 12px;">Rose Hack is UC Riverside’s women-centric hackathon. Their mission is to encourage individuals from underrepresented groups in STEM to create a strong network together and build an amazing project through their shared passions in Science and Technology.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="seekthetreasure">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: url(&quot;assets/img/seekthetreasure.png&quot;);"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Seek the Treasure</h1>
+                        <p>November 2020</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff9669;width: 50%;left: 0;">
+                        <p>pygame</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #000090;width: 50%;right: 0;">
+                        <p>illustrator</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/78QjbJLJU94" width="560" height="315" style="padding-bottom: 15px;padding-top: 15px;width: 100%;"></iframe>
+                    <p>I love stories. I love how engaging and impactful it is to experience a story as if you lived it. Books, poetry, videos and podcasts are amazing media, but games are one of the most powerful ways to engage with your audience. It has been a dream of mine to build a game and to be honest it always looked extremely difficult. So, with this hackathon I wanted to challenge myself.<br><br>This was my first time using <strong>PyGame </strong>and my first time designing a character and design assets on <strong>Illustrator</strong>. I applied the principles of Object Oriented Programming and desirable difficulty to build each game level.<br><br>48 hours of coding later. Here's how far I got.</p>
+                    <figure class="figure"><img class="figure-img" src="assets/img/lovelace.gif" style="padding-top: 15px;padding-bottom: 15px;width: 100%;">
+                        <figcaption class="figure-caption">Hand-drawn character design and animation based on Ada Lovelace.</figcaption>
+                    </figure><a class="btn btn-primary category-button" role="button" style="color: #ff9669;border-color: #ff9669;" href="https://github.com/lianlaughsalot/SeektheTreasure" target="_blank">Github</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://www.creatica.io/" target="_blank"><img class="footer-logo" src="assets/img/creatica.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Creatica</h1>
+                                <p style="font-size: 12px;">New York City's virtual hackathon for women and non-binary individuals in high school and college<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="blindminervating">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/blindminervating.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Blind Minervating</h1>
+                        <p>April 2019</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">San Francisco, USA</span></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>At the tail end of my first year at Minerva, I realised that M'22 (that is the Minerva Class of 2022) were in a unique position. We were spending a semester with our seniors who we would never have met considering each cohort spends each semester in a different city. M'22 would finish up their first year by the end of April while M'19 would graduate at the end of May.<br><br>I thought: <strong>"Wouldn't it be cool if we got a chance to get to know M'19?"</strong> and got cracking at what I dubbed 'Blind Minervating'. It was a complicated workflow I cobbled together in a few days and rolled out.</p><img src="assets/img/blind%20minervating%20process.png" style="width: 140%;">
+                    <p>I matched <strong>40 Minervans</strong> using this process and that was all I wanted - for people to meet each other and have fun, inspiring and meaningful conversations before we dispersed all over the world.<br><br>The process I used could be refined with initiatives like <a href="http://www.teawithstrangers.com/" target="_blank">Tea with Strangers</a>&nbsp;and <a href="https://lunchclub.com/" target="_blank">LunchClub</a>&nbsp;which both have more systematised methods of matching and meeting. But it taught me a started me off on another interest - community building. The question now was how could these connections be sustained and compounded?&nbsp;</p>
+                    <div class="box quote-box">
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Thank you for organizing this, I had a great time! You've made everything really easy and professional (seriously these emails look better than 90% of&nbsp;Minerva&nbsp;stuff) and the guide was very impressive! I really appreciate the effort which I can see went into it to craft the right framing and find good questions for our specific interests.&nbsp;<br></p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">Anonymised Feedback</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="quidditch">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/quidditch.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Leo Quidditch Tournament</h1>
+                        <p>Aug 2015</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Subang Jaya, Malaysia</span></p>
+                        <p><i class="fa fa-user"></i>&nbsp;Organising Chairperson</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Did you know that the sport from J.K. Rowling's Harry Potter is a real game with <a href="https://www.usquidditch.org/about/rules" target="_blank">real rules</a> and <a href="http://www.usquidditchcup.com/" target="_blank">real competitions</a>? Me neither.<br><br>It started off as a thought: how could we advocate for gender equality through an event? Hours of trolling around the internet later, and I learned that Quidditch has team gender ratios which I believed was a good starting point (only to realise later that there is a big <a href="https://edeq.stanford.edu/sections/equality-outcome" target="_blank">difference between equality of opportunity and equality of outcome</a>).&nbsp;<br><br>With the help of the Damansara Dementors, a local Quidditch team, we learned the rules and how to build the proper equipment. 120 participants attended what turned out to be <strong>Malaysia's largest Quidditch tournament</strong>!<br><br>It was one of my first steps to imagining how experiences could be used for advocacy. The outcome was <strong>MYR1,251 raised for the Women's Aid Organisation</strong> and a game enjoyed by all genders. But I don't believe I could say I was successful on more than that front (at least not yet).</p><a class="btn btn-primary category-button" role="button" style="color: #ff4eb1;border-color: #ff4eb1;" href="https://quidditchpost.blogspot.com/2015/09/sri-kl-hosts-malaysias-biggest.html" target="_blank">article</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://wao.org.my/" target="_blank"><img class="footer-logo" src="assets/img/wao.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Women's aid organisation</h1>
+                                <p style="font-size: 12px;">Our mission is to end violence against women and promote gender equality in Malaysia<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://www.facebook.com/sriklleoclub" target="_blank"><img class="footer-logo" src="assets/img/leo%20club%20skl.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Leo club of sri kuala lumpur</h1>
+                                <p style="font-size: 12px;">Community service club for Year 9 and upper students in Sri Kuala Lumpur Secondary School<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="manai">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/manai.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Summer Program</h1>
+                        <p>July - August 2019</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Hokkaido, Japan</span></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;">
+                        <p>education</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p></p><a class="btn btn-primary category-button" role="button" style="color: #1d00ff;border-color: #1d00ff;" href="https://manai.me/documents/2019report_EN.pdf" target="_blank">REport</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://manai.me/" target="_blank"><img class="footer-logo" src="assets/img/manai.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Manai institute of science &amp; technology</h1>
+                                <p style="font-size: 12px;">Produce innovators who solves the world’s challenges using science and technology as a tool to create a new world.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="http://mistletoe.co/en/" target="_blank"><img class="footer-logo" src="assets/img/mistletoe_logo.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Mistletoe inc.</h1>
+                                <p style="font-size: 12px;">Our mission is to re-create a sustainable human-centered future using technology. Our community make up of those who lead the forefront of the global startup movement including entrepreneurs, investors, researchers and visionaries. Together we aim to solve global social challenges that humanity will face in the near future.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="maxis">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/maxis.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Misi Jelajah Digital</h1>
+                        <p>August 2021</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Malaysia</span></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;">
+                        <p>education</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p></p><a class="btn btn-primary category-button" role="button" style="color: #1d00ff;border-color: #1d00ff;" href="https://manai.me/documents/2019report_EN.pdf" target="_blank">REport</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://manai.me/" target="_blank"><img class="footer-logo" src="assets/img/maxis-squarelogo.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Maxis berhad</h1>
+                                <p style="font-size: 12px;">Maxis&nbsp;is a leading communications service provider in&nbsp;Malaysia&nbsp;that offers mobile and broadband plans, and the latest smartphones.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="sxsw">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/sxsw.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Evolving Higher Ed with Global Student Perspective</h1>
+                        <p>March 2019</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Texas, USA</span></p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;width: 50%;right: 0;">
+                        <p>education</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;width: 50%;left: 0;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="box quote-box">
+                        <p>As students at Minerva, we experience an educational methodology that trains us to resolve some of the deepest issues in our society. Join us as we delve into best practices from unique educational styles from across the world with the goal of revolutionizing higher education. Learn from us how to design engaging practices in higher ed, which are rooted in the science of learning but applicable to the cultural context of present-day students.<br></p>
+                    </div>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 left-col"><a href="https://www.sxswedu.com/" target="_blank"><img class="footer-logo" src="assets/img/sxsw%20logo.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">SXSW EDu</h1>
+                                <p style="font-size: 12px;">SXSW EDU (pronounced South by Southwest E-D-U) is most well known for the SXSW EDU Conference &amp; Festival, an annual event that fosters innovation and learning within the education industry.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="usapps">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/USApps%20Discord%20Background%202.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">USAPPS</h1>
+                        <p>August 2021</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Malaysia</span></p>
+                        <p><i class="fa fa-user"></i>&nbsp; Core Committee</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;width: 50%;right: 0;">
+                        <p>education</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;width: 50%;left: 0;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>I owe my education at Minerva University to USAPPS. In 2017, I attended a weekend of workshops on US education and learned about a university which I truly resonated with. 6 months later, I was accepted to Minerva and began some of the best four years of my life.<br><br>To me, part of USAPPS is about giving back. Coming back year after year to help other Malaysians pursue similar aspirations of a US education. In the <strong>13th iteration of USAPPS</strong>, I signed up as one of the four Core members take up the mantle.</p>
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/discord.jpeg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/alumni%20interview.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/grad%20school.jpeg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/educationusa.jpeg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/killer%20essay.jpeg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/core.jpeg" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-4" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-4" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="3"></li>
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="4"></li>
+                            <li data-bs-target="#carousel-4" data-bs-slide-to="5"></li>
+                        </ol>
+                    </div>
+                    <p style="margin-top: 1rem">We adapted the magic of an in-person event to an engaging <strong>Discord server with over 400 active members from our 600 registrations nationwide</strong>. I personally coordinated the speakers and content for the 13 workshops and 6 classroom simulations of USAPPS, featuring a collaboration with Yale-NUS College, graduate students and alumni interviewers and most importantly over 60 Malaysians studying/who have studied in the US.<br><br>USAPPS is my community because it brings together Malaysians through a shared experience of studying in the US. It is support and kindness and openness. I've poured a lot of love into the event and I am happy to see our participants continue to benefit from the resources we've provided to them.</p>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 left-col"><a href="https://www.usapps.org/" target="_blank"><img class="footer-logo" src="assets/img/usapps%20logo.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">USAPPS</h1>
+                                <p style="font-size: 12px;">Helping Malaysian dreamers who want to study in the USA.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="tutorforkids">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/tutorforkids.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Tutor For Kids</h1>
+                        <p>2017-2019</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Subang Jaya, Malaysia</span></p>
+                        <p><i class="fa fa-user"></i>&nbsp; Organising Chairperson</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #1d00ff;width: 50%;right: 0;">
+                        <p>education</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;width: 50%;left: 0;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>By this time, my thoughts moved towards sustainable projects. How might I impact my community deeply? Education seemed to be the answer to me, a key to moving out from poverty, a tool to empower individuals to achieve their potential.<br><br>I purposely selected a home for underprivileged children that was under the radar to maximise our efforts. <strong>Every Saturday for two years</strong>, I assembled a group of university students to <strong>tutor over twenty 7 to 16 year-olds</strong>. We developed simple lesson plans, either project-based learning or helping with homework.<br><br>Even after I left for university in August 2018, the project continued to run, but the strain proved too great to bear. There was a high turnover rate and rapidly shifting commitment from tutors, so the project discontinued in 2019.<br><br>It is my hope that our efforts made as big an impact as I set out to, but if nothing else, it only spurred me to explore more ways to uplift the people around me.</p>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 left-col"><a href="https://www.instagram.com/leoclubsja/" target="_blank"><img class="footer-logo" src="assets/img/sja.jpeg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">leo club of subang jaya alumni</h1>
+                                <p style="font-size: 12px;">A community service club for youths aged between 18-30 years old, regardless of educational affiliation. Chartered by Ang Li-Lian in July 2017.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="rftc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/rftc.jpg&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Run For the Children</h1>
+                        <p>Aug 2015</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Shah Alam, Malaysia</span></p>
+                        <p><i class="fa fa-user"></i>&nbsp; Organising Chairperson</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This was the first event I ever organised. As a girl of fifteen, I stumbled through the world of social impact, constantly reassessing how I might give more, how I might change more.<br><br>Money was the answer I found back then which led to the charity run. The Leo Club had never organised one in its history, so my team and I paved the way for others to learn the operational steps to look out for.&nbsp;<br><br><strong>250 participants ran to raise MYR2,855</strong> to grant a terminally ill child's wish to visit Petrosains with his family. The question was what else could I do now?</p>
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/Run%20For%20the%20Children.jpg">
+                        <figcaption class="figure-caption">I designed that shirt! It was one of my very first forays into digital art back when I was still using <a href="https://www.getpaint.net/" target="_blank">Paint.net</a>.</figcaption>
+                    </figure>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 left-col"><a href="https://makeawish.org.my/" target="_blank"><img class="footer-logo" src="assets/img/make%20a%20wish.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Make-a-wish malaysia</h1>
+                                <p style="font-size: 12px;">Make-A-Wish is the largest wish-granting organization in the world and can be found in nearly 50 countries around the globe.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://www.facebook.com/sriklleoclub" target="_blank"><img class="footer-logo" src="assets/img/leo%20club%20skl.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Leo club of sri kuala lumpur</h1>
+                                <p style="font-size: 12px;">Community service club for Year 9 and upper students in Sri Kuala Lumpur Secondary School<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="link">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/link.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/link-2.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/link-3.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/link-4.jpg" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
+                        </ol>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;">
+                        <p>events</p>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>There were two problem statements: how might we raise awareness about North Korean refugees? And how might we raise money to support their repatriation?<br><br>Our solution was two-fold. One was to co-organise a masquerade ball, a fun and instructive project in fundraising for the Changemakers of LiNK. It provided the opportunity to engage with North Koreans and to build a sense of community. The second was to ideate potential fundraising avenues that LiNK could use moving forward as their capacity and needs change.<br><br>Over the four months of the semester we collaborated with LiNK to educate our peers about North Korea and in the process caught a glimpse of what it means to live in a politically divided, yet culturally similar world.</p><a class="btn btn-primary category-button" role="button" style="color: #ff4eb1;border-color: #ff4eb1;" href="https://drive.google.com/file/d/12WIomrjbStUpgZQDR88wrff4LJx1YY_p/view" target="_blank">Engagement proposal</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://www.libertyinnorthkorea.org/" target="_blank"><img class="footer-logo" src="assets/img/link.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">liberty in north korea</h1>
+                                <p style="font-size: 12px;">Our Vision is our name: Liberty in North Korea. The day every man, woman, and child in North Korea can live free and full lives. Our Mission: Working alongside the North Korean people to accelerate change.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://amongusatminerva.wixsite.com/amongus" target="_blank"><img class="footer-logo" src="assets/img/Tempclipboard-image-1.png"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Amongus</h1>
+                                <p style="font-size: 12px;">We contribute to social justice efforts&nbsp;in the 7 Minerva rotation cities by engaging with projects and organizations and raising awareness in the Minerva community.<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="samgakji">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header-image" style="background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)), url(&quot;assets/img/Samgakji1.png&quot;) center / cover no-repeat;"></div>
+                    <div class="header-content">
+                        <h1 class="modal-title">Samgakji Stories</h1>
+                        <p>Dec 2019</p>
+                        <p><span class="material-icons" style="font-size: small;">location_on</span>&nbsp;&nbsp;<span class="location">Seoul, South Korea</span></p>
+                        <p><i class="fa fa-user"></i>&nbsp; Story Writer</p>
+                    </div>
+                    <div class="modal-bottom-tag category-tag" style="background: #ff4eb1;">
+                        <div class="modal-bottom-tag category-tag" style="background: #8d04fb;width: 50%;left: 0;">
+                            <p>writing</p>
+                        </div>
+                        <div class="modal-bottom-tag category-tag" style="background: #1d00ff;width: 50%;right: 0;">
+                            <p>education</p>
+                        </div>
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body">
+                    <p>The history of Samgakji was fading, phasing out together with the final few holders of its memories and crumbling relics of its colourful identity. Yongsan Legacy's mission was to safeguard the memory and ours to spread it.</p>
+                    <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/Samgakji1.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/Samgakji%202.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/Samgakji%204.png" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/Samgakji%203.png" alt="Slide Image"></div>
+                        </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
+                        </ol>
+                    </div>
+                    <p style="margin-top: 1rem">We pitched the idea of building a choose-your-own-adventure game based on Samgakji to Daniel Oh, the founder of Yongsan Legacy, and he loved it. It was an innovative way to actively engage the general public with Samgakji's history.<br><br>I was the story-teller, filling up the whiteboard and creating over a hundred slides to capture set out every possible path the player could take through the game to reach one of the eight possible endings. <br><br>It was a complex project that required coordination with two other teammates in-charge of creating the website and design assets and two of Daniel Oh's students from the Korea University Architecture Department to translate the narrative and build 3D models of Samgakji.<br><br>History is made up of the culmination of individual decisions and what better way to explore it than to make those decisions yourself and learn a little more about an almost forgotten place at the same time!</p>
+                    <div class="box quote-box">
+                        <p style="padding-top: 15px;">The birthplace of Chocopie, the site of a vibrant art scene and a US military base. While we were walking through Samgakji on a tour, it never occurred to us that Samgakji was all these things. Daniel Oh explained that there used to be a huge rotary above the three-way junction, but it had been taken down in 1994, with nothing left today save the pictures and stories archived by Yongsan Legacy Project. The rotary that once serviced traffic from Itaewon, Seoul Station and the Han River is now all but forgotten, along with all the other pieces of Samgakji.<br><br>It was a privilege to work with Yongsan Legacy Project. We hope that you try out the game and learn something new. You never know how history may surprise you.<br></p>
+                    </div><a class="btn btn-primary square-button" role="button" href="http://samgakjistories.yongsanlegacy.org/" style="background: #42662f; margin: 5%" target="_blank">play</a>
+                </div>
+                <div class="modal-footer" style="justify-content: center;">
+                    <div class="container">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-6 left-col"><a href="https://yongsanlegacy.org/" target="_blank"><img class="footer-logo" src="assets/img/YSL-logoD.jpg"></a></div>
+                            <div class="col-md-6 right-col">
+                                <h1 class="footer-title">Yongsan Legacy</h1>
+                                <p style="font-size: 12px;">Preserving the invaluable treasures of Yongsan Garrison<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="social-icons"><a href="mailto:lilianang999@gmail.com"><i class="icon ion-ios-email"></i></a><a href="https://www.linkedin.com/in/li-lian-ang-997746171/" target="_blank"><i class="icon ion-social-linkedin"></i></a><a href="https://github.com/lianlaughsalot" target="_blank"><i class="icon ion-social-github"></i></a><a href="https://www.instagram.com/lianlaughsalot/" target="_blank"><i class="icon ion-social-instagram-outline"></i></a><a href="https://www.facebook.com/ang.lilian.9" target="_blank"><i class="icon ion-social-facebook"></i></a></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/category-filter.js"></script>
+    <script src="assets/js/popup.js"></script>
+    <script src="assets/js/sortdate.js"></script>
+</body>
+
+</html>

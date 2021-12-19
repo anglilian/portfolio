@@ -1,0 +1,278 @@
+.gradient {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #FFE01F 10%,#ff9669 25%, #FF4EB1 40%,#8D04FB 60%, #1D00FF 75%, #000090 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: jaf-domus-titling-web;
+}
+
+.space {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.box {
+  width: 70%;
+  height: 90%;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.box:before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  top: -2px;
+  left: -2px;
+  z-index: 1;
+  border-left: 5px solid #000000;
+  border-top: 5px solid #000000;
+}
+
+.box:after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  right: -2px;
+  bottom: -2px;
+  z-index: 1;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.background-image {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  filter: blur(1.2px);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: center;
+  cursor: pointer;
+}
+
+.bottom-tag {
+  height: 25px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.category-button {
+  border-width: 0.25rem;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: jaf-domus-titling-web;
+  font-weight: bold;
+  background: white;
+  font-size: 1.1rem;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.filter {
+  background: rgba(0,0,0,0.49);
+  z-index: 0;
+  height: 175px;
+  width: 300px;
+}
+
+.header-content {
+  font-family: jaf-domus;
+  color: white;
+  text-shadow: 2px 4px 4px black;
+  position: absolute;
+  font-weight: 300;
+  font-size: large;
+}
+
+.content {
+  font-family: jaf-domus;
+  color: white;
+  text-shadow: 2px 4px 4px black;
+  position: relative;
+  font-weight: 300;
+  line-height: 40%;
+}
+
+.half-bottom {
+  width: 150px !important;
+}
+
+.category-tag {
+  font-family: jaf-domus;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: medium;
+  color: white;
+}
+
+.left {
+  border-bottom-left-radius: 10px;
+  left: 0;
+  border-bottom-right-radius: 0px;
+}
+
+.right {
+  border-bottom-right-radius: 10px;
+  right: 0;
+  border-bottom-left-radius: 0px;
+}
+
+.center {
+  justify-content: space-evenly;
+  align-content: center;
+  height: 250px;
+  width: 300px;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.show-art {
+  margin: auto;
+  width: 100%;
+}
+
+.modal-body {
+  font-family: jaf-domus;
+  color: black;
+  font-weight: 350;
+  text-align: justify;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.modal-bottom-tag {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+}
+
+.modal-digital-art {
+  padding: 0;
+  position: relative;
+}
+
+.modal-writing {
+  padding: 0;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+
+.modal-dialog {
+  max-width: 70%;
+}
+
+.header-image {
+  background-size: cover !important;
+  height: 250px;
+  width: 100%;
+  filter: blur(1.2px);
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.modal-header {
+  padding: 0;
+  border-radius: calc(.3rem - 1px);
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-close {
+  display: none;
+}
+
+.modal-footer {
+  font-family: jaf-domus-titling-web;
+}
+
+.square-button {
+  color: white;
+  font-family: "Domus Titling";
+  border: none;
+  border-radius: 0;
+  font-size: larger;
+  font-weight: 600;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 5px 5px black;
+}
+
+.col-md-3 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#hello {
+  margin-left: 8px;
+  font-size: 3rem;
+  font-family: "Domus Titling";
+  font-weight: bold;
+}
+
+.anglilian {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 18rem;
+  padding-top: 0px;
+}
+
+.icon {
+  font-size: 10rem;
+}
+
+p {
+  font-family: jaf-domus;
+}
+
+.about-header {
+  font-family: jaf-domus;
+  text-transform: lowercase;
+}
+
+.social-icons {
+}
+
+.modal-dialog {
+  left: 50%;
+  float: left;
+  transform: translate(-50%,0) !important;
+}
+
+.box.quote-box {
+  width: 100%;
+  font-weight: 400;
+  padding: 1rem;
+}
+
