@@ -217,7 +217,6 @@
 
 .square-button {
   color: white;
-  font-family: "Domus Titling";
   border: none;
   border-radius: 0;
   font-size: larger;
@@ -236,6 +235,7 @@
 #hello {
   margin-left: 8px;
   font-size: 3rem;
+  font-family: "Domus Titling";
   font-weight: bold;
 }
 
