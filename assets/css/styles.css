@@ -1,7 +1,9 @@
 .gradient {
-  /* background: linear-gradient(to right, #FFE01F 10%,#ff9669 25%, #FF4EB1 40%,#8D04FB 60%, #1D00FF 75%, #000090 90%); */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
+  text-transform: uppercase;
+  background: black;
+  /*background: linear-gradient(to right, #FFE01F 10%,#ff9669 25%, #FF4EB1 40%,#8D04FB 60%, #1D00FF 75%, #000090 90%);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 2rem;
   font-weight: 900;
   font-family: jaf-domus-titling-web;
@@ -166,7 +168,7 @@
   position: absolute;
   bottom: 0;
   height: 30px;
-  width: 100%;
+  width: 50%;
 }
 
 .modal-digital-art {
@@ -234,7 +236,7 @@
 #hello {
   margin-left: 8px;
   font-size: 3rem;
-  font-family: "jaf-domus-titling-web";
+  font-family: "Domus Titling";
   font-weight: bold;
 }
 
