@@ -59,7 +59,8 @@ const TypingText = () => {
   return (
     <div className="typing-container">
       <div className="text-cursor-container">
-        <div id="feature-text" style={{ color: carouselText[textIndex].color }}>
+        <div className="mr-2">I AM </div>
+        <div style={{ color: carouselText[textIndex].color }}>
           {displayedText}
         </div>
         <span className="input-cursor"></span>

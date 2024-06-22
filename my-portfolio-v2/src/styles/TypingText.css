@@ -4,6 +4,8 @@
   align-items: center;
   flex-flow: wrap;
   font-weight: bold;
+  font-size: xx-large;
+  text-transform: uppercase;
 }
 
 .text-cursor-container {
@@ -11,16 +13,10 @@
   align-items: baseline; /* Align text and cursor baseline */
 }
 
-#feature-text {
-  margin: 0;
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-
 .input-cursor {
   display: inline-block;
   width: 0.1rem;
-  height: 3rem; /* Match the height of the text */
+  height: 1.5rem; /* Match the height of the text */
   background-color: rgb(var(--foreground-rgb));
   animation: blink 0.6s linear infinite alternate;
 }

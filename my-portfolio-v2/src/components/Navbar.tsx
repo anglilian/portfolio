@@ -21,20 +21,20 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-8">
           <li>
             <Link href="#home" className="nav-link">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#about" className="nav-link">
-              About
+            <Link href="#projects" className="nav-link">
+              Projects
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="nav-link">
-              Projects
+            <Link href="#about" className="nav-link">
+              About
             </Link>
           </li>
         </ul>
