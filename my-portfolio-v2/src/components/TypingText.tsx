@@ -30,7 +30,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text }) => {
 
   return (
     <div className="flex items-baseline">
-      <div className="text-xxl">{displayedText}</div>
+      <div className="text-4xl">{displayedText}</div>
       <span className="input-cursor"></span>
     </div>
   );

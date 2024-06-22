@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 248, 248, 237;
@@ -10,7 +12,10 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  @apply text-base;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  @apply text-xl;
 }
 
 @layer utilities {
@@ -20,10 +25,20 @@ body {
 }
 
 .nav-link {
-  color: gray;
   @apply text-lg;
 }
 
 .nav-link:hover {
   color: rgba(var(--foreground-rgb), 0.8); /* Use variable for hover state */
+}
+
+/* Basic link styling */
+a {
+  color: #1a73e8; /* Default link color */
+}
+
+/* Hover state for links */
+a:hover {
+  color: #185abc; /* Hover link color */
+  text-decoration: underline; /* Default text decoration */
 }
