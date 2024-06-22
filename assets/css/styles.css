@@ -81,7 +81,7 @@
 }
 
 .filter {
-  background: rgba(0,0,0,0.49);
+  background: rgba(0, 0, 0, 0.49);
   z-index: 0;
   height: 175px;
   width: 300px;
@@ -202,7 +202,7 @@
 
 .modal-header {
   padding: 0;
-  border-radius: calc(.3rem - 1px);
+  border-radius: calc(0.3rem - 1px);
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
@@ -227,12 +227,6 @@
   box-shadow: 5px 5px black;
 }
 
-.col-md-3 {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
 #hello {
   margin-left: 8px;
   font-size: 3rem;
@@ -252,22 +246,15 @@
   font-size: 10rem;
 }
 
-p {
-  font-family: jaf-domus;
-}
-
 .about-header {
   font-family: jaf-domus;
   text-transform: lowercase;
 }
 
-.social-icons {
-}
-
 .modal-dialog {
   left: 50%;
   float: left;
-  transform: translate(-50%,0) !important;
+  transform: translate(-50%, 0) !important;
 }
 
 .box.quote-box {
@@ -275,4 +262,3 @@ p {
   font-weight: 400;
   padding: 1rem;
 }
-

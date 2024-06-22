@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 248, 237;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  @apply text-base;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.nav-link {
+  color: gray;
+  @apply text-lg;
+}
+
+.nav-link:hover {
+  color: rgba(var(--foreground-rgb), 0.8); /* Use variable for hover state */
+}
