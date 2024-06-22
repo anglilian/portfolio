@@ -1,22 +1,7 @@
-.typing-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  font-weight: bold;
-  font-size: xx-large;
-  text-transform: uppercase;
-}
-
-.text-cursor-container {
-  display: flex;
-  align-items: baseline; /* Align text and cursor baseline */
-}
-
 .input-cursor {
   display: inline-block;
   width: 0.1rem;
-  height: 1.5rem; /* Match the height of the text */
+  height: 1rem; /* Match the height of the text */
   background-color: rgb(var(--foreground-rgb));
   animation: blink 0.6s linear infinite alternate;
 }
