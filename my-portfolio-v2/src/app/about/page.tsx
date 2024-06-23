@@ -5,7 +5,7 @@ import Section from "../../components/Section";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col items-center p-8">
+    <div className="max-w-4xl w-full">
       <div className="max-w-4xl w-full">
         <div className="overflow-hidden flex flex-col md:flex-row mb-8">
           <div className="relative w-56 h-56 flex-shrink-0">
