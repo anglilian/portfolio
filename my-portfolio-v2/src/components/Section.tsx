@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames";
+import Link from "next/link";
 
 interface SectionProps {
   title: string;
   imageSrc: string;
   imageAlt: string;
   imageSize?: string;
+  link?: string;
   children: React.ReactNode;
   titleColor?: string;
   imagePosition?: "left" | "right";
@@ -16,12 +18,13 @@ const Section: React.FC<SectionProps> = ({
   title,
   imageSrc,
   imageAlt,
+  link,
   children,
-  titleColor = "text-blue-600",
+  titleColor = "text-black",
   imagePosition = "left",
 }) => {
   return (
-    <div className=" p-8 mb-8">
+    <div className="">
       <div
         className={classNames("flex items-stretch mb-4", {
           "flex-row": imagePosition === "left",
@@ -32,12 +35,23 @@ const Section: React.FC<SectionProps> = ({
           <div
             className={`absolute inset-0 flex items-center justify-center mr-8`}
           >
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              layout="fill"
-              objectFit="contain"
-            />
+            {link ? (
+              <Link href={link}>
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </Link>
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                layout="fill"
+                objectFit="contain"
+              />
+            )}
           </div>
         </div>
         <div className="space-y-2">

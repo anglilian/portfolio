@@ -1,19 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import { SkillCategory, skillColors } from "@/constants/skillColours"; // Adjust the path accordingly
+import { skillColors } from "@/constants/skillColours"; // Adjust the path accordingly
 import Link from "next/link";
+import { ProjectMetadata } from "@/types/projects";
 
-interface ProjectBoxProps {
-  title: string;
-  startDate: Date;
-  endDate?: Date | string | null; // Allow different types for end date
-  location?: string;
-  skills: { name: string; category: SkillCategory }[]; // Adjusted to include skill category
-  imageSrc: string;
-  slug: string;
-}
-
-const ProjectBox: React.FC<ProjectBoxProps> = ({
+const ProjectBox: React.FC<ProjectMetadata> = ({
   title,
   startDate,
   endDate,
@@ -65,13 +56,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
                 </>
               )}
             </div>
-            <div className="flex flex-wrap space-x-2 pt-2">
+            <div className="flex flex-wrap gap-2 pt-2">
               {skills.map((skill, index) => (
                 <span
                   key={index}
                   className={`bg-${
                     skillColors[skill.category]
-                  } text-white text-xs px-2 py-1 rounded lowercase`}
+                  } text-white text-sm px-2 rounded lowercase`}
                 >
                   {skill.name}
                 </span>

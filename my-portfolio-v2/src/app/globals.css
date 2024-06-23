@@ -10,7 +10,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  @apply text-xl;
+  @apply text-xl font-normal;
 }
 
 @layer utilities {

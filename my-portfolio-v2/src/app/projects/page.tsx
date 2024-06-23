@@ -5,14 +5,21 @@ import { useRouter } from "next/navigation";
 import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
+import { ProjectMetadata } from "@/types/projects";
 
 // Import other project metas here
 import { metadata as humansOfMinervaMeta } from "./humans-of-minerva/metadata";
 import { metadata as usappsMeta } from "./usapps/metadata";
+import { metadata as bookMeta } from "./purple-is-the-noblest-shroud/metadata";
+import { metadata as maxisMeta } from "./misi-jelajah-digital/metadata";
+import { metadata as guardianMeta } from "./guardian/metadata";
 
-const projects = [
+const projects: ProjectMetadata[] = [
   humansOfMinervaMeta,
   usappsMeta,
+  bookMeta,
+  maxisMeta,
+  guardianMeta,
   // Add other project metas here
 ];
 
@@ -52,12 +59,12 @@ const Projects = () => {
   );
 
   return (
-    <div className="max-w-6xl w-full">
+    <div>
       <FilterButtons
         selectedCategory={selectedCategory}
         onCategoryClick={handleCategoryClick}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sortedPortfolioItems.map((item, index) => (
           <ProjectBox
             key={index}

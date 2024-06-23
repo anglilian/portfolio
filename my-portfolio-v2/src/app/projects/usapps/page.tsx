@@ -62,6 +62,7 @@ const Usapps = () => {
           imageAlt="USAPPS"
           titleColor="text-black"
           imagePosition="left"
+          link="https://www.usapps.org/"
         >
           <p>Helping Malaysian dreamers who want to study in the USA.</p>
         </Section>

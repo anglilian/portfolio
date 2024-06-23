@@ -3,5 +3,5 @@
 }
 
 .project-footer {
-  @apply text-sm mt-8;
+  @apply flex flex-col text-sm mt-8 space-y-8 mb-4;
 }
