@@ -36,7 +36,6 @@ const HumansOfMinerva = () => {
         <Section
           title="Minerva University"
           imageSrc="/images/minerva.png"
-          imageAlt="Minerva University"
           titleColor="text-black"
           imagePosition="left"
         >

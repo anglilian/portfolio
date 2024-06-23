@@ -7,33 +7,54 @@ import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
 import { ProjectMetadata } from "@/types/projects";
 
-// Import other project metas here
-import { metadata as humansOfMinervaMeta } from "./humans-of-minerva/metadata";
-import { metadata as usappsMeta } from "./usapps/metadata";
-import { metadata as bookMeta } from "./purple-is-the-noblest-shroud/metadata";
-import { metadata as maxisMeta } from "./misi-jelajah-digital/metadata";
-import { metadata as guardianMeta } from "./guardian/metadata";
-import { metadata as heroMeta } from "./heros-journey/metadata";
-import { metadata as seekTheTeasureMeta } from "./seek-the-treasure/metadata";
-import { metadata as textAnalysisMeta } from "./text-analysis/metadata";
-
-const projects: ProjectMetadata[] = [
-  humansOfMinervaMeta,
-  usappsMeta,
-  bookMeta,
-  maxisMeta,
-  guardianMeta,
-  heroMeta,
-  seekTheTeasureMeta,
-  textAnalysisMeta,
-  // Add other project metas here
-];
-
 const Projects = () => {
   const router = useRouter();
+  const [subfolders, setSubfolders] = useState<string[]>([]);
+  const [projects, setProjects] = useState<ProjectMetadata[]>([]);
+  const [loadingSubfolders, setLoadingSubfolders] = useState<boolean>(true);
+
   const [selectedCategory, setSelectedCategory] = useState<
     SkillCategory | "all"
   >("all");
+
+  useEffect(() => {
+    const fetchSubfolders = async () => {
+      try {
+        const response = await fetch("/api/listSubfolders");
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setSubfolders(data);
+        } else {
+          console.error("Expected array but got", data);
+        }
+      } catch (error) {
+        console.error("Error fetching subfolder names:", error);
+      } finally {
+        setLoadingSubfolders(false); // Set loading state to false after fetching
+      }
+    };
+
+    fetchSubfolders();
+  }, []);
+
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      try {
+        const metadataPromises = subfolders.map(async (subfolder) => {
+          const metadata = await import(`./${subfolder}/metadata`);
+          return metadata.metadata as ProjectMetadata;
+        });
+        const allMetadata = await Promise.all(metadataPromises);
+        setProjects(allMetadata);
+      } catch (error) {
+        console.error("Error importing metadata:", error);
+      }
+    };
+
+    if (!loadingSubfolders && subfolders.length > 0) {
+      fetchMetadata();
+    }
+  }, [loadingSubfolders, subfolders]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

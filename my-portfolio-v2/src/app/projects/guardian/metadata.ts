@@ -1,6 +1,7 @@
 import { SkillCategory } from "@/constants/skillColours";
+import { ProjectMetadata } from "@/types/projects";
 
-export const metadata = {
+export const metadata: ProjectMetadata = {
   title: "GUARDIAN",
   slug: "guardian",
   startDate: new Date("January 2021"),

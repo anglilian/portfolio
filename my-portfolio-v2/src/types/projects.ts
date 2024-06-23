@@ -8,4 +8,8 @@ export interface ProjectMetadata {
   skills: { name: string; category: SkillCategory }[]; // Adjusted to include skill category
   imageSrc: string;
   slug: string;
+  bannerImage?: string;
+  link?: string;
+  linkLabel?: string;
+  role?: string;
 }

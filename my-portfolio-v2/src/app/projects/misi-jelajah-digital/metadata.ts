@@ -1,6 +1,7 @@
 import { SkillCategory } from "@/constants/skillColours";
+import { ProjectMetadata } from "@/types/projects";
 
-export const metadata = {
+export const metadata: ProjectMetadata = {
   title: "Misi Jelajah Digital",
   slug: "misi-jelajah-digital",
   startDate: new Date("August 2021"),
