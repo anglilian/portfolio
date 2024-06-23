@@ -5,7 +5,16 @@ import { useRouter } from "next/navigation";
 import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
-import { portfolioItems } from "@/constants/portfolioItems"; // Adjust the path accordingly
+
+// Import other project metas here
+import { metadata as humansOfMinervaMeta } from "./humans-of-minerva/metadata";
+import { metadata as usappsMeta } from "./usapps/metadata";
+
+const projects = [
+  humansOfMinervaMeta,
+  usappsMeta,
+  // Add other project metas here
+];
 
 const Projects = () => {
   const router = useRouter();
@@ -32,14 +41,14 @@ const Projects = () => {
 
   const filteredPortfolioItems =
     selectedCategory === "all"
-      ? portfolioItems
-      : portfolioItems.filter((item) =>
+      ? projects
+      : projects.filter((item) =>
           item.skills.some((skill) => skill.category === selectedCategory)
         );
 
   // Sort the filtered portfolio items by startDate in descending order
   const sortedPortfolioItems = filteredPortfolioItems.sort(
-    (a, b) => b.startDate.getTime() - a.startDate.getTime()
+    (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
 
   return (
@@ -53,11 +62,12 @@ const Projects = () => {
           <ProjectBox
             key={index}
             title={item.title}
-            startDate={item.startDate}
+            startDate={new Date(item.startDate)}
             endDate={item.endDate}
             location={item.location}
             skills={item.skills}
             imageSrc={item.imageSrc}
+            slug={item.slug}
           />
         ))}
       </div>

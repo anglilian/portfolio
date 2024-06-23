@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/Navbar";
-
-const inter = Inter({ subsets: ["latin"] });
+import { nunito } from "@/components/fonts";
+import "@/app/globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Ang Li-Lian",
@@ -22,10 +20,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Ang Li-Lian</title>
       </head>
-      <body className={inter.className}>
+      <body className={`${nunito.className} antialiased`}>
         <Navbar />
         <div className="min-h-screen flex flex-col items-center p-8">
-          {children}
+          <div className="max-w-4xl w-full">{children}</div>
         </div>
       </body>
     </html>

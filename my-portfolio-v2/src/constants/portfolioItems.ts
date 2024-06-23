@@ -10,14 +10,14 @@ export const portfolioItems = [
     skills: [
       { name: "Podcast editting", category: "creative" as SkillCategory },
     ],
-    imageSrc: "/images/humansOfMinerva.png", // Replace with actual image paths
+    imageSrc: "/images/humans-of-minerva.png", // Replace with actual image paths
   },
   {
     title: "USAPPS",
     startDate: new Date("Aug 2021"),
     location: "Malaysia",
     skills: [{ name: "events", category: "events" as SkillCategory }],
-    imageSrc: "/images/usappsDiscord.png",
+    imageSrc: "/images/usapps-banner.png",
   },
   {
     title: "Purple is the Noblest Shroud",
@@ -26,7 +26,7 @@ export const portfolioItems = [
       { name: "historical fiction", category: "writing" as SkillCategory },
       { name: "history", category: "education" as SkillCategory },
     ],
-    imageSrc: "/images/purpleShroud.jpg",
+    imageSrc: "/images/purple-shroud.jpg",
   },
   // ... add the rest of the portfolio items similarly
 ];
