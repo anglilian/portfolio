@@ -41,13 +41,15 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
         <Image
           src={imageSrc}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="(max-width: 768px) 100vw, 
+          (max-width: 1200px) 50vw, 
+          33vw" // Adjust the sizes as needed
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex flex-col justify-end p-4">
-          <h2 className="font-bold text-xl text-white">{title}</h2>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute inset-0 flex flex-col justify-end p-6">
+          <h2 className="font-bold text-2xl text-white">{title}</h2>
           <div className="flex-row flex space-x-2 text-gray-300 text-lg">
             <p>
               {formattedStartDate}
@@ -60,11 +62,11 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
               </>
             )}
           </div>
-          <div className="flex flex-wrap space-x-2 pt-1">
+          <div className="flex flex-wrap space-x-2 pt-2">
             {skills.map((skill, index) => (
               <span
                 key={index}
-                className={`${
+                className={`bg-${
                   skillColors[skill.category]
                 } text-white text-xs px-2 py-1 rounded lowercase`}
               >
