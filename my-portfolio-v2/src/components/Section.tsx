@@ -6,7 +6,6 @@ import Link from "next/link";
 interface SectionProps {
   title: string;
   imageSrc: string;
-  imageAlt: string;
   imageSize?: string;
   link?: string;
   children: React.ReactNode;
@@ -17,7 +16,6 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({
   title,
   imageSrc,
-  imageAlt,
   link,
   children,
   titleColor = "text-black",
@@ -39,7 +37,7 @@ const Section: React.FC<SectionProps> = ({
               <Link href={link}>
                 <Image
                   src={imageSrc}
-                  alt={imageAlt}
+                  alt={title}
                   layout="fill"
                   objectFit="contain"
                 />
@@ -47,7 +45,7 @@ const Section: React.FC<SectionProps> = ({
             ) : (
               <Image
                 src={imageSrc}
-                alt={imageAlt}
+                alt={title}
                 layout="fill"
                 objectFit="contain"
               />

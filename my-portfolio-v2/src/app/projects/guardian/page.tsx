@@ -9,20 +9,40 @@ import { useRouter } from "next/navigation";
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import QuoteBox from "@/components/QuoteBox";
+import IconRow from "@/components/IconRow";
+import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
-const Usapps = () => {
+const Guardian = () => {
   const router = useRouter();
+  const icons = [
+    {
+      icon: faGithub,
+      link: "https://github.com/AliAkberAakash/guardian",
+      alt: "GitHub",
+    },
+    {
+      icon: faFigma,
+      link: "https://www.figma.com/proto/dUWeaGznbFTMhIwgLJTkdk/Guardian?node-id=47%3A25&scaling=scale-down",
+      alt: "Figma",
+    },
+  ];
 
   return (
     <div>
       <ProjectHeader metadata={metadata} />
       <section className="project-section">
+        <YouTubeEmbed
+          videoId="DPSKJ_KtyBU"
+          title="GUARDIAN - always by your side"
+        />
+
         <QuoteBox quote="GUARDIAN is always by your side. The app is designed to empower women through accessible SOS features, alerts to contacts and quick directions to safe places. With GUARDIAN, you'll never walk alone."></QuoteBox>
         <p>
-          This was the third hackathon I'd ever attended and it was also the
-          second virtual one. I signed up hoping to immerse myself in over 48
-          hours of learning, of trying and failing, of simply making - little
-          did I know that the project would be awarded First Place.
+          This was the third hackathon I'd ever attended! I signed up hoping to
+          immerse myself in over 48 hours of learning, of trying and failing, of
+          simply making - little did I know that the project would be awarded{" "}
+          <b>First Place</b>.
         </p>
         <p>
           Our team met for the first time once the hackathon started and we
@@ -53,6 +73,7 @@ const Usapps = () => {
       </section>
       <footer className="project-footer">
         <hr></hr>
+        <IconRow icons={icons} />
         <Section
           title="Rose Hack"
           imageSrc="/images/rosehack.png"
@@ -71,4 +92,4 @@ const Usapps = () => {
   );
 };
 
-export default Usapps;
+export default Guardian;

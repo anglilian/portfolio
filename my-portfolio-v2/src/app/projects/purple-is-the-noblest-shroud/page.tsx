@@ -7,13 +7,13 @@ import { useRouter } from "next/navigation";
 
 import ProjectHeader from "@/components/ProjectHeader";
 import QuoteBox from "@/components/QuoteBox";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faAmazon,
   faGoodreads,
 } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"; // Import globe icon from solid icons
+import IconRow from "@/components/IconRow"; // Import the IconRow component
 
 const Book = () => {
   const router = useRouter();
@@ -108,23 +108,7 @@ How did she do it?"
       </section>
       <footer className="project-footer">
         <hr></hr>
-        <div className="flex space-x-4 justify-center">
-          {icons.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex justify-center items-center w-16 h-16 rounded-full border border-gray-300 hover:border-gray-500 transition"
-            >
-              <FontAwesomeIcon
-                icon={item.icon}
-                size="2x"
-                className="text-gray-600"
-              />
-            </a>
-          ))}
-        </div>
+        <IconRow icons={icons} />
       </footer>
     </div>
   );

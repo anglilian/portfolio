@@ -13,6 +13,9 @@ import { metadata as usappsMeta } from "./usapps/metadata";
 import { metadata as bookMeta } from "./purple-is-the-noblest-shroud/metadata";
 import { metadata as maxisMeta } from "./misi-jelajah-digital/metadata";
 import { metadata as guardianMeta } from "./guardian/metadata";
+import { metadata as heroMeta } from "./heros-journey/metadata";
+import { metadata as seekTheTeasureMeta } from "./seek-the-treasure/metadata";
+import { metadata as textAnalysisMeta } from "./text-analysis/metadata";
 
 const projects: ProjectMetadata[] = [
   humansOfMinervaMeta,
@@ -20,6 +23,9 @@ const projects: ProjectMetadata[] = [
   bookMeta,
   maxisMeta,
   guardianMeta,
+  heroMeta,
+  seekTheTeasureMeta,
+  textAnalysisMeta,
   // Add other project metas here
 ];
 
