@@ -1,15 +1,14 @@
 {
-  "name": "my-portfolio-v2",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://anglilian.github.io/portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "deploy": "npm run build && npm run export && gh-pages -d out",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && gh-pages -d out"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
