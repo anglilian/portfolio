@@ -11,7 +11,7 @@ import ProjectHeader from "@/components/ProjectHeader";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Image from "next/image";
 
-const SeekTheTreasure = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   return (
@@ -67,4 +67,4 @@ const SeekTheTreasure = () => {
   );
 };
 
-export default SeekTheTreasure;
+export default ProjectContent;

@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 
-const HumansOfMinerva = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   return (
@@ -33,12 +33,7 @@ const HumansOfMinerva = () => {
       </section>
       <footer className="project-footer">
         <hr></hr>
-        <Section
-          title="Minerva University"
-          imageSrc="/images/minerva.png"
-          titleColor="text-black"
-          imagePosition="left"
-        >
+        <Section title="Minerva University" imageSrc="/images/minerva.png">
           <p>
             Minerva University strives to develop problem-solvers,
             entrepreneurs, and wise leaders from around the globe; and weave
@@ -55,4 +50,4 @@ const HumansOfMinerva = () => {
   );
 };
 
-export default HumansOfMinerva;
+export default ProjectContent;

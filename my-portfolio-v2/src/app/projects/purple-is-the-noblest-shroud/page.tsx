@@ -15,7 +15,7 @@ import {
 import { faGlobe } from "@fortawesome/free-solid-svg-icons"; // Import globe icon from solid icons
 import IconRow from "@/components/IconRow"; // Import the IconRow component
 
-const Book = () => {
+const ProjectContent = () => {
   const router = useRouter();
   const icons = [
     {
@@ -114,4 +114,4 @@ How did she do it?"
   );
 };
 
-export default Book;
+export default ProjectContent;

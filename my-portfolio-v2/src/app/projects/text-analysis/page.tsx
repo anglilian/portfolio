@@ -7,12 +7,9 @@ import { metadata } from "./metadata";
 import { useRouter } from "next/navigation";
 
 import ProjectHeader from "@/components/ProjectHeader";
-import Image from "next/image";
-import IconRow from "@/components/IconRow";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ImageGallery from "@/components/ImageGallery";
 
-const TextAnalysis = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   const tsImages = [
@@ -63,4 +60,4 @@ const TextAnalysis = () => {
   );
 };
 
-export default TextAnalysis;
+export default ProjectContent;

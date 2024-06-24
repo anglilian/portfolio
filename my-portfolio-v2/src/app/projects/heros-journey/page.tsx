@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 
-const HerosJourney = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   return (
@@ -40,4 +40,4 @@ const HerosJourney = () => {
   );
 };
 
-export default HerosJourney;
+export default ProjectContent;

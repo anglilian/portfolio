@@ -20,7 +20,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ metadata }) => {
       <div className="container mx-auto flex justify-end items-center">
         <BackButton />
       </div>
-      <div className="flex flex-row space-x-4 text-gray-600 uppercase text-lg tracking-wide">
+      <div className="flex flex-row flex-wrap space-x-4 text-gray-600 uppercase text-lg tracking-wide justify-center">
         {metadata.title && <p>{metadata.title}</p>}
         {metadata.role && (
           <>
@@ -33,7 +33,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ metadata }) => {
             <span>•</span>
             <Link
               href={metadata.link}
-              className="text-pink-700 flex items-center font-bold"
+              className="text-pink-700 flex items-center font-bold flex-wrap justify-center text-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

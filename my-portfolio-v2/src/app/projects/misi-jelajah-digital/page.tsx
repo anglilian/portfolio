@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import ProjectHeader from "@/components/ProjectHeader";
 import Section from "@/components/Section";
 
-const Book = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   return (
@@ -49,7 +49,6 @@ const Book = () => {
         <Section
           title="Maxis Berhad"
           imageSrc="/images/maxis-logo.png"
-          imageAlt="Maxis"
           link="https://www.maxis.com.my/en/about-maxis/corporate-responsibility/ekelas/ekelas-introduction/"
         >
           <p>
@@ -60,7 +59,6 @@ const Book = () => {
         <Section
           title="Sunago"
           imageSrc="/images/sunago.png"
-          imageAlt="Sunago"
           link="https://www.sunagoeducation.com/"
         >
           <p>
@@ -74,4 +72,4 @@ const Book = () => {
   );
 };
 
-export default Book;
+export default ProjectContent;

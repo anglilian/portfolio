@@ -27,7 +27,6 @@ export default function About() {
         <Section
           title="work"
           imageSrc="/images/bluedot.png"
-          imageAlt="BlueDot Impact"
           titleColor="text-blue-600"
           imagePosition="left"
         >
@@ -47,7 +46,6 @@ export default function About() {
         <Section
           title="education"
           imageSrc="/images/minerva.png"
-          imageAlt="Minerva University"
           titleColor="text-orange-600"
           imagePosition="right"
         >

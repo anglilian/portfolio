@@ -13,7 +13,7 @@ import IconRow from "@/components/IconRow";
 import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 
-const Guardian = () => {
+const ProjectContent = () => {
   const router = useRouter();
   const icons = [
     {
@@ -77,7 +77,6 @@ const Guardian = () => {
         <Section
           title="Rose Hack"
           imageSrc="/images/rosehack.png"
-          imageAlt="Rose Hack"
           link="https://rosehack.com/"
         >
           <p>
@@ -92,4 +91,4 @@ const Guardian = () => {
   );
 };
 
-export default Guardian;
+export default ProjectContent;

@@ -17,7 +17,7 @@ const images = [
   // Add more images as needed
 ];
 
-const Usapps = () => {
+const ProjectContent = () => {
   const router = useRouter();
 
   return (
@@ -59,9 +59,6 @@ const Usapps = () => {
         <Section
           title="USAPPS"
           imageSrc="/images/usapps-logo.png"
-          imageAlt="USAPPS"
-          titleColor="text-black"
-          imagePosition="left"
           link="https://www.usapps.org/"
         >
           <p>Helping Malaysian dreamers who want to study in the USA.</p>
@@ -71,4 +68,4 @@ const Usapps = () => {
   );
 };
 
-export default Usapps;
+export default ProjectContent;
