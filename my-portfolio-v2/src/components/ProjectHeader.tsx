@@ -55,7 +55,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ metadata }) => {
         )}
       </div>
       {metadata.bannerImage && (
-        <div className="flex justify-center items-center w-full overflow-hidden shadow-md">
+        <div className="flex justify-center items-center w-full overflow-hidden shadow-lg">
           <div className="relative w-full h-auto">
             <Image
               src={metadata.bannerImage}

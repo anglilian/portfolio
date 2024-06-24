@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
-import Image from "next/image";
+import ImageWithCaption from "@/components/ImageWithCaption";
 
 const ProjectContent = () => {
   const router = useRouter();
@@ -37,18 +37,10 @@ const ProjectContent = () => {
           game level.
         </p>
         <p>48 hours of coding later. Here's how far I got.</p>
-        <figure className="flex flex-col items-center">
-          <Image
-            src="/images/lovelace.gif"
-            alt="Hand-drawn character design and animation based on Ada Lovelace."
-            width={600}
-            height={400}
-            objectFit="contain"
-          />
-          <figcaption className="mt-2 text-center text-gray-500">
-            Hand-drawn character design and animation based on Ada Lovelace.
-          </figcaption>
-        </figure>
+        <ImageWithCaption
+          src="/images/lovelace.gif"
+          alt="Hand-drawn character design and animation based on Ada Lovelace."
+        ></ImageWithCaption>
       </section>
       <footer className="project-footer">
         <hr></hr>

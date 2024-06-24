@@ -19,6 +19,7 @@ const IconRow: React.FC<IconRowProps> = ({ icons }) => {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
+          title={item.alt}
           className="flex justify-center items-center w-16 h-16 rounded-full border border-gray-300 hover:border-gray-500 transition"
         >
           <FontAwesomeIcon
