@@ -1,0 +1,30 @@
+// src/config/subfolders.js
+const subfolders = [
+  "blind-minervating",
+  "capstone-project",
+  "city-of-stars",
+  "fall-masquerade-ball",
+  "fear-the-wolves",
+  "flower-project",
+  "guardian",
+  "heros-journey",
+  "humans-of-minerva",
+  "hyderabad-walking-tour",
+  "i-lava-you",
+  "leaf-typography",
+  "leo-quidditch",
+  "manai",
+  "misi-jelajah-digital",
+  "purple-is-the-noblest-shroud",
+  "run-for-the-children",
+  "samgakji-stories",
+  "seek-the-treasure",
+  "sxsw-edu",
+  "tale-as-old-as-time",
+  "text-analysis",
+  "tutor-for-kids",
+  "usapps",
+  "whale-shark",
+];
+
+export default subfolders;

@@ -6,10 +6,11 @@ import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
 import { ProjectMetadata } from "@/types/projects";
+import subfolders from "@/constants/subfolders";
 
 const Projects: React.FC = () => {
   const router = useRouter();
-  const [subfolders, setSubfolders] = useState<string[]>([]);
+  // const [subfolders, setSubfolders] = useState<string[]>([]);
   const [projects, setProjects] = useState<ProjectMetadata[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -17,23 +18,23 @@ const Projects: React.FC = () => {
     SkillCategory | "all"
   >("all");
 
-  useEffect(() => {
-    const fetchSubfolders = async () => {
-      try {
-        const response = await fetch("/api/listSubfolders");
-        const data = await response.json();
-        if (Array.isArray(data)) {
-          setSubfolders(data);
-        } else {
-          console.error("Expected array but got", data);
-        }
-      } catch (error) {
-        console.error("Error fetching subfolder names:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchSubfolders = async () => {
+  //     try {
+  //       const response = await fetch("/api/listSubfolders");
+  //       const data = await response.json();
+  //       if (Array.isArray(data)) {
+  //         setSubfolders(data);
+  //       } else {
+  //         console.error("Expected array but got", data);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching subfolder names:", error);
+  //     }
+  //   };
 
-    fetchSubfolders();
-  }, []);
+  //   fetchSubfolders();
+  // }, []);
 
   useEffect(() => {
     const fetchMetadata = async () => {
