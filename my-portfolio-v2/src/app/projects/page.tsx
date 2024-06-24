@@ -7,11 +7,11 @@ import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
 import { ProjectMetadata } from "@/types/projects";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   const router = useRouter();
   const [subfolders, setSubfolders] = useState<string[]>([]);
   const [projects, setProjects] = useState<ProjectMetadata[]>([]);
-  const [loadingSubfolders, setLoadingSubfolders] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const [selectedCategory, setSelectedCategory] = useState<
     SkillCategory | "all"
@@ -29,8 +29,6 @@ const Projects = () => {
         }
       } catch (error) {
         console.error("Error fetching subfolder names:", error);
-      } finally {
-        setLoadingSubfolders(false); // Set loading state to false after fetching
       }
     };
 
@@ -41,20 +39,30 @@ const Projects = () => {
     const fetchMetadata = async () => {
       try {
         const metadataPromises = subfolders.map(async (subfolder) => {
-          const metadata = await import(`./${subfolder}/metadata`);
-          return metadata.metadata as ProjectMetadata;
+          try {
+            const metadata = await import(`./${subfolder}/metadata`);
+            return metadata.metadata as ProjectMetadata;
+          } catch (error) {
+            console.error(`Error importing metadata from ${subfolder}:`, error);
+            return null;
+          }
         });
+
         const allMetadata = await Promise.all(metadataPromises);
-        setProjects(allMetadata);
+        setProjects(
+          allMetadata.filter((meta): meta is ProjectMetadata => meta !== null)
+        ); // Type guard to filter out null values
       } catch (error) {
         console.error("Error importing metadata:", error);
+      } finally {
+        setLoading(false); // Set loading state to false after fetching metadata
       }
     };
 
-    if (!loadingSubfolders && subfolders.length > 0) {
+    if (subfolders.length > 0) {
       fetchMetadata();
     }
-  }, [loadingSubfolders, subfolders]);
+  }, [subfolders]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -84,6 +92,10 @@ const Projects = () => {
   const sortedPortfolioItems = filteredPortfolioItems.sort(
     (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
