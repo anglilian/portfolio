@@ -18,9 +18,9 @@ const TypingText: React.FC<TypingTextProps> = ({ texts }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
 
-  const getRandomTypingSpeed = () => {
+  const getRandomTypingSpeed = useCallback(() => {
     return Math.random() * (200 - 100) + 100; // Random delay between 100ms and 200ms
-  };
+  }, []);
 
   const type = useCallback(() => {
     if (charIndex < texts[textIndex].text.length) {
