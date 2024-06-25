@@ -30,11 +30,12 @@ const TypingText: React.FC<TypingTextProps> = ({ texts }) => {
       }, getRandomTypingSpeed());
       return () => clearTimeout(timeout);
     } else if (texts.length > 1) {
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         setIsDeleting(true);
       }, 2000); // Pause before starting to delete
+      return () => clearTimeout(timeout);
     }
-  }, [charIndex, texts, textIndex]);
+  }, [charIndex, texts, textIndex, getRandomTypingSpeed]);
 
   const deleteText = useCallback(() => {
     if (charIndex > 0) {
@@ -47,7 +48,7 @@ const TypingText: React.FC<TypingTextProps> = ({ texts }) => {
       setIsDeleting(false);
       setTextIndex((prev) => (prev + 1) % texts.length);
     }
-  }, [charIndex, texts.length]);
+  }, [charIndex, getRandomTypingSpeed, texts.length]);
 
   useEffect(() => {
     if (isDeleting) {
