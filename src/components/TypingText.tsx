@@ -22,34 +22,34 @@ const TypingText: React.FC<TypingTextProps> = ({ texts }) => {
     return Math.random() * (200 - 100) + 100; // Random delay between 100ms and 200ms
   };
 
-  const type = () => {
-    if (charIndex < texts[textIndex].text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + texts[textIndex].text[charIndex]);
-        setCharIndex(charIndex + 1);
-      }, getRandomTypingSpeed());
-      return () => clearTimeout(timeout);
-    } else if (texts.length > 1) {
-      setTimeout(() => {
-        setIsDeleting(true);
-      }, 2000); // Pause before starting to delete
-    }
-  };
-
-  const deleteText = () => {
-    if (charIndex > 0) {
-      const timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev.slice(0, -1));
-        setCharIndex(charIndex - 1);
-      }, getRandomTypingSpeed());
-      return () => clearTimeout(timeout);
-    } else {
-      setIsDeleting(false);
-      setTextIndex((prev) => (prev + 1) % texts.length);
-    }
-  };
-
   useEffect(() => {
+    const type = () => {
+      if (charIndex < texts[textIndex].text.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedText((prev) => prev + texts[textIndex].text[charIndex]);
+          setCharIndex(charIndex + 1);
+        }, getRandomTypingSpeed());
+        return () => clearTimeout(timeout);
+      } else if (texts.length > 1) {
+        setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000); // Pause before starting to delete
+      }
+    };
+
+    const deleteText = () => {
+      if (charIndex > 0) {
+        const timeout = setTimeout(() => {
+          setDisplayedText((prev) => prev.slice(0, -1));
+          setCharIndex(charIndex - 1);
+        }, getRandomTypingSpeed());
+        return () => clearTimeout(timeout);
+      } else {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    };
+
     if (isDeleting) {
       const cleanup = deleteText();
       return cleanup;

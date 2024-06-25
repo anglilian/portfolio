@@ -7,7 +7,9 @@ export default function About() {
     <div className="min-h-screen flex flex-col items-center p-8">
       <div className="max-w-4xl w-full space-y-8 m-8">
         <div className="overflow-hidden flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl font-bold">So you're wondering who I am?</h1>
+          <h1 className="text-4xl font-bold">
+            So you&apos;re wondering who I am?
+          </h1>
           <p>(that&apos;s a pretty loaded question)</p>
         </div>
 
