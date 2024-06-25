@@ -15,10 +15,12 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
 }) => {
   const formatDate = (date: Date) => {
     if (!date) return "";
-    const options =
-      date.getMonth() > 0
-        ? { year: "numeric", month: "short" }
-        : { year: "numeric" };
+
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: date.getMonth() > 0 ? "short" : undefined,
+    };
+
     return date.toLocaleDateString("en-US", options);
   };
 
