@@ -5,7 +5,7 @@ import Section from "../../components/Section";
 
 export default function About() {
   return (
-    <div className="max-w-4xl w-full">
+    <div className="min-h-screen flex flex-col items-center p-8">
       <div className="max-w-4xl w-full">
         <div className="overflow-hidden flex flex-col md:flex-row mb-8">
           <div className="relative w-56 h-56 flex-shrink-0">
@@ -18,7 +18,11 @@ export default function About() {
             />
           </div>
           <div className="flex-grow p-8">
-            <TypingText text="Hello, Li-Lian here!" />
+            <p>
+              <TypingText
+                texts={[{ text: "Hello, Li-Lian here!", color: "text-black" }]}
+              />
+            </p>
             <p className="mt-4">So you&apos;re wondering who I am?</p>
             <p>(that&apos;s a pretty loaded question)</p>
           </div>

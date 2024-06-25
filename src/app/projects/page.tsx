@@ -98,24 +98,26 @@ const Projects: React.FC = () => {
   }
 
   return (
-    <div>
-      <FilterButtons
-        selectedCategory={selectedCategory}
-        onCategoryClick={handleCategoryClick}
-      />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {sortedPortfolioItems.map((item, index) => (
-          <ProjectBox
-            key={index}
-            title={item.title}
-            startDate={new Date(item.startDate)}
-            endDate={item.endDate}
-            location={item.location}
-            skills={item.skills}
-            imageSrc={item.imageSrc}
-            slug={item.slug}
-          />
-        ))}
+    <div className="min-h-screen flex flex-col items-center p-8">
+      <div className="max-w-6xl w-full">
+        <FilterButtons
+          selectedCategory={selectedCategory}
+          onCategoryClick={handleCategoryClick}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {sortedPortfolioItems.map((item, index) => (
+            <ProjectBox
+              key={index}
+              title={item.title}
+              startDate={new Date(item.startDate)}
+              endDate={item.endDate}
+              location={item.location}
+              skills={item.skills}
+              imageSrc={item.imageSrc}
+              slug={item.slug}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

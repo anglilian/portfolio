@@ -21,9 +21,9 @@ export default function RootLayout({
         <title>Ang Li-Lian</title>
       </head>
       <body className={`${nunito.className} antialiased`}>
-        <Navbar />
-        <div className="min-h-screen flex flex-col items-center p-8">
-          <div className="max-w-4xl w-full">{children}</div>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          {children}
         </div>
       </body>
     </html>
