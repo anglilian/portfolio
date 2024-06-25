@@ -11,11 +11,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-2">
         {images.map((image, index) => (
           <div
             key={index}
-            className="w-1/4 cursor-pointer"
+            className="w-1/3 cursor-pointer"
             onClick={() => setSelectedImage(image.src)}
           >
             <Image

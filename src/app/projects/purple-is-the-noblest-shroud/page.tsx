@@ -44,6 +44,8 @@ const ProjectContent = () => {
     <div>
       <ProjectHeader metadata={metadata} />
       <section className="project-section">
+        <IconRow icons={icons} />
+
         <QuoteBox
           quote="
 
@@ -107,10 +109,6 @@ How did she do it?"
           sequel!
         </p>
       </section>
-      <footer className="project-footer">
-        <hr></hr>
-        <IconRow icons={icons} />
-      </footer>
     </div>
   );
 };

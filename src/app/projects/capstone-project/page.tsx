@@ -40,14 +40,14 @@ const ProjectContent = () => {
       <ProjectHeader metadata={metadata} />
       <section className="project-section">
         <YouTubeEmbed videoId="4sYtz0wsdfA"></YouTubeEmbed>
-        <p>
-          This was truly such a rogue Capstone project where I banked hard on
-          breadth over depth, trying to create something tangible across several
-          mediums and somehow tie them all together. In the end, I made a GitHub
-          repo with the code I used for data analysis, built an interactive
-          website from scratch and designed infographics on Instagram.
-        </p>
         <IconRow icons={icons} />
+        <p>
+          This was such a rogue Capstone project where I banked hard on breadth
+          over depth, trying to create something tangible across several mediums
+          and somehow tie them all together. In the end, I made a GitHub repo
+          with the code I used for data analysis, built an interactive website
+          from scratch and designed infographics on Instagram.
+        </p>
         <QuoteBox
           quote="This Capstone walks through the end-to-end process of producing works
           that engage the public in meaningful dialogue about how Malaysia came

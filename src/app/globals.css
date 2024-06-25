@@ -29,11 +29,5 @@ body {
 
 /* Basic link styling */
 a {
-  color: #1a73e8; /* Default link color */
-}
-
-/* Hover state for links */
-a:hover {
-  color: #185abc; /* Hover link color */
-  text-decoration: underline; /* Default text decoration */
+  @apply text-purple-600 hover:underline;
 }

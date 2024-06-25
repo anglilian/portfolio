@@ -13,19 +13,22 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
   imageSrc,
   slug,
 }) => {
-  const formattedStartDate = startDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-  });
+  const formatDate = (date: Date) => {
+    if (!date) return "";
+    const options =
+      date.getMonth() > 0
+        ? { year: "numeric", month: "short" }
+        : { year: "numeric" };
+    return date.toLocaleDateString("en-US", options);
+  };
+
+  const formattedStartDate = formatDate(startDate);
 
   let formattedEndDate;
   if (endDate === "Present") {
     formattedEndDate = "Present";
   } else if (endDate instanceof Date) {
-    formattedEndDate = endDate.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-    });
+    formattedEndDate = formatDate(endDate);
   }
 
   return (
@@ -37,24 +40,24 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 
-          (max-width: 1200px) 50vw, 
-          33vw" // Adjust the sizes as needed
+              (max-width: 1200px) 50vw, 
+              33vw" // Adjust the sizes as needed
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-6">
             <h2 className="font-bold text-2xl text-white">{title}</h2>
-            <div className="flex-row flex space-x-2 text-gray-300 text-lg">
+            <div className="flex-wrap flex space-x-2 text-gray-300 text-lg">
               <p>
                 {formattedStartDate}
                 {formattedEndDate && ` - ${formattedEndDate}`}
+                {location && (
+                  <>
+                    <span> • </span>
+                    {location}
+                  </>
+                )}
               </p>
-              {location && (
-                <>
-                  <span>•</span>
-                  <p>{location}</p>
-                </>
-              )}
             </div>
             <div className="flex flex-wrap gap-2 pt-2">
               {skills.map((skill, index) => (

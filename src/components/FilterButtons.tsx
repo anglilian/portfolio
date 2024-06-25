@@ -17,7 +17,7 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
   onCategoryClick,
 }) => {
   return (
-    <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-between font-bold p-8">
+    <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-between font-bold p-4">
       <button
         className={`px-4 py-2 rounded-full ${
           selectedCategory === "all"

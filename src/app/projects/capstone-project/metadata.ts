@@ -6,6 +6,7 @@ export const metadata: ProjectMetadata = {
   slug: "capstone-project",
   startDate: new Date("July 2021"),
   endDate: new Date("April 2022"),
+  role: "Capstone Project",
   skills: [
     {
       name: "Web dev, Canva",

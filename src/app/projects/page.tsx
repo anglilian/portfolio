@@ -6,12 +6,12 @@ import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
 import { ProjectMetadata } from "@/types/projects";
+import Footer from "@/components/Footer";
 
 const Projects: React.FC = () => {
   const router = useRouter();
   const [subfolders, setSubfolders] = useState<string[]>([]);
   const [projects, setProjects] = useState<ProjectMetadata[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
   const [selectedCategory, setSelectedCategory] = useState<
     SkillCategory | "all"
@@ -54,8 +54,6 @@ const Projects: React.FC = () => {
         ); // Type guard to filter out null values
       } catch (error) {
         console.error("Error importing metadata:", error);
-      } finally {
-        setLoading(false); // Set loading state to false after fetching metadata
       }
     };
 
@@ -93,31 +91,25 @@ const Projects: React.FC = () => {
     (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
   return (
-    <div className="min-h-screen flex flex-col items-center p-8">
-      <div className="max-w-6xl w-full">
-        <FilterButtons
-          selectedCategory={selectedCategory}
-          onCategoryClick={handleCategoryClick}
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {sortedPortfolioItems.map((item, index) => (
-            <ProjectBox
-              key={index}
-              title={item.title}
-              startDate={new Date(item.startDate)}
-              endDate={item.endDate}
-              location={item.location}
-              skills={item.skills}
-              imageSrc={item.imageSrc}
-              slug={item.slug}
-            />
-          ))}
-        </div>
+    <div>
+      <FilterButtons
+        selectedCategory={selectedCategory}
+        onCategoryClick={handleCategoryClick}
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {sortedPortfolioItems.map((item, index) => (
+          <ProjectBox
+            key={index}
+            title={item.title}
+            startDate={new Date(item.startDate)}
+            endDate={item.endDate}
+            location={item.location}
+            skills={item.skills}
+            imageSrc={item.imageSrc}
+            slug={item.slug}
+          />
+        ))}
       </div>
     </div>
   );
