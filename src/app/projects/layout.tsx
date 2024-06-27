@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const maxWidthClass =
     usePathname() === "/projects" ? "max-w-6xl" : "max-w-4xl";
   return (
-    <div className="min-h-screen flex flex-col items-center p-8">
+    <div className="min-h-screen flex flex-col items-center p-12">
       <div className={`${maxWidthClass} w-full space-y-8`}>{children}</div>
       <Footer></Footer>
     </div>

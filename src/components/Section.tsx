@@ -40,6 +40,7 @@ const Section: React.FC<SectionProps> = ({
                   alt={title}
                   layout="fill"
                   objectFit="contain"
+                  sizes="(max-width: 100px) 100vw, 50vw"
                 />
               </Link>
             ) : (

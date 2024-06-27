@@ -6,7 +6,6 @@ import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
 import { ProjectMetadata } from "@/types/projects";
-import Footer from "@/components/Footer";
 
 const Projects: React.FC = () => {
   const router = useRouter();

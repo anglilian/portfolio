@@ -40,10 +40,8 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
           <Image
             src={imageSrc}
             alt={title}
-            fill
-            sizes="(max-width: 768px) 100vw, 
-              (max-width: 1200px) 50vw, 
-              33vw" // Adjust the sizes as needed
+            width={400} // Adjust as needed
+            height={300} // Adjust as needed
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black opacity-60"></div>
