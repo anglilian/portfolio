@@ -27,7 +27,7 @@ const getBlockChildren = async (blockId: string) => {
     })) as ListBlockChildrenResponse;
 
     results = results.concat(blocksResponse.results);
-    cursor = blocksResponse.next_cursor;
+    cursor = blocksResponse.next_cursor ?? undefined;
   } while (cursor);
 
   return results;
