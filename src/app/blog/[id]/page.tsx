@@ -7,7 +7,7 @@ type PageContent = {
   blocks: any[];
 };
 
-const renderBlock = (block: any) => {
+const renderBlock = (block: any, index: number = 0) => {
   const { type, id } = block;
   const value = block[type];
 
@@ -41,26 +41,27 @@ const renderBlock = (block: any) => {
       );
     case "heading_1":
       return (
-        <h1 key={id} className="text-4xl pt-8 font-semibold">
+        <h1 key={id} className="text-4xl pt-10 font-bold">
           {renderRichText(value.rich_text)}
         </h1>
       );
     case "heading_2":
       return (
-        <h2 key={id} className="text-2xl pt-6 font-semibold">
+        <h2 key={id} className="text-2xl pt-8 font-bold">
           {renderRichText(value.rich_text)}
         </h2>
       );
     case "heading_3":
       return (
-        <h3 key={id} className="text-xl pt-4 font-semibold">
+        <h3 key={id} className="text-xl pt-6 font-bold">
           {renderRichText(value.rich_text)}
         </h3>
       );
     case "bulleted_list_item":
       return (
-        <li key={id} className="list-disc list-inside pt-1">
-          {renderRichText(value.rich_text)}
+        <li key={id} className="flex items-start pt-1">
+          <span className="flex-shrink-0 list-disc ml-2 ">•</span>
+          <span className="ml-4">{renderRichText(value.rich_text)}</span>
           {value.children && (
             <ul className="pl-4">
               {value.children.map((child: any) => renderBlock(child))}
@@ -83,7 +84,7 @@ const renderBlock = (block: any) => {
       return (
         <div
           key={id}
-          className="flex items-center bg-gray-100 p-4 rounded-md shadow-md"
+          className="flex items-center bg-secondaryColor p-4 rounded-md shadow-md"
         >
           <div className="mr-2">{value.icon.emoji}</div>
           <div>{renderRichText(value.rich_text)}</div>
@@ -93,13 +94,18 @@ const renderBlock = (block: any) => {
       return (
         <details
           key={id}
-          className="mt-4 pt-4 bg-gray-100 p-4 rounded-md shadow-sm"
+          className="mt-4 pt-4 border-secondaryColor border-2 text-gray-500 p-4 rounded-md shadow-sm"
         >
-          <summary className="cursor-pointer">
-            {renderRichText(value.rich_text)}
+          <summary className="cursor-pointer flex items-center">
+            <div className="flex items-top">
+              <span className="mr-2">▶</span>
+              {renderRichText(value.rich_text)}
+            </div>
           </summary>
-          <div className="ml-4 mt-2 space-y-2">
-            {value.children?.map((child: any) => renderBlock(child))}
+          <div className="ml-6 mt-2 space-y-2">
+            {value.children?.map((child: any, childIndex: number) =>
+              renderBlock(child, childIndex)
+            )}
           </div>
         </details>
       );
@@ -125,12 +131,6 @@ const Page = () => {
             throw new Error("Failed to fetch page content");
           }
           const data = await response.json();
-          // Log only the toggle blocks to inspect their structure
-          data.blocks.forEach((block: any) => {
-            if (block.type === "toggle") {
-              console.log("Toggle Block:", block);
-            }
-          });
           setPageContent(data);
         } catch (error) {
           console.error(error);
@@ -157,10 +157,10 @@ const Page = () => {
       <div className="max-w-2xl w-full space-y-8 m-8">
         <h1 className="text-4xl font-bold mb-4">{pageContent.title}</h1>
         <div>
-          {pageContent.blocks.map((block) => {
+          {pageContent.blocks.map((block, index) => {
             if (block.type === "bulleted_list") {
               return (
-                <ul key={block.id} className="list-disc list-inside pl-5">
+                <ul key={block.id} className="list-disc pl-5">
                   {block.items.map((item: any) => renderBlock(item))}
                 </ul>
               );

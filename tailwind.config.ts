@@ -30,5 +30,15 @@ const config: Config = {
     "border-blue-600",
     "border-green-600",
   ],
+  theme: {
+    extend: {
+      colors: {
+        primaryColor: "rgb(var(--primary-rgb))",
+        secondaryColor: "rgb(var(--secondary-rgb))",
+        foregroundColor: "rgb(var(--foreground-rgb))",
+        backgroundColor: "rgb(var(--background-rgb))",
+      },
+    },
+  },
 };
 export default config;
