@@ -5,6 +5,8 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 248, 248, 237;
+  --primary-rgb: 255, 69, 0;
+  --secondary-rgb: 255, 215, 0;
 }
 
 body {
@@ -24,10 +26,11 @@ body {
 }
 
 .nav-link:hover {
-  color: rgba(var(--foreground-rgb), 0.8); /* Use variable for hover state */
+  color: rgba(var(--primary-rgb), 0.8); /* Use variable for hover state */
 }
 
 /* Basic link styling */
 a {
-  @apply text-purple-600 hover:underline;
+  @apply hover:underline;
+  color: rgba(var(--primary-rgb));
 }
