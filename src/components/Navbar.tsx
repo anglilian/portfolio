@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-md py-4">
+    <nav className="shadow-md py-4 p-2">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" passHref>
           <div className="flex items-center">
@@ -98,7 +98,7 @@ const Navbar = () => {
                 "text-gray-400": pathname !== "/about",
               })}
             >
-              About me
+              About
             </Link>
           </li>
           <li className="hidden md:block">
