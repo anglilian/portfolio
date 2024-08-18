@@ -15,6 +15,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="shadow-md py-4 p-2">
       <div className="container mx-auto flex justify-between items-center">
@@ -64,6 +68,7 @@ const Navbar = () => {
                 "text-black": pathname === "/",
                 "text-gray-400": pathname !== "/",
               })}
+              onClick={closeNavbar}
             >
               Home
             </Link>
@@ -75,6 +80,7 @@ const Navbar = () => {
                 "text-black": pathname === "/projects",
                 "text-gray-400": pathname !== "/projects",
               })}
+              onClick={closeNavbar}
             >
               Projects
             </Link>
@@ -86,6 +92,7 @@ const Navbar = () => {
                 "text-black": pathname === "/blog",
                 "text-gray-400": pathname !== "/blog",
               })}
+              onClick={closeNavbar}
             >
               Blog
             </Link>
@@ -97,6 +104,7 @@ const Navbar = () => {
                 "text-black": pathname === "/about",
                 "text-gray-400": pathname !== "/about",
               })}
+              onClick={closeNavbar}
             >
               About
             </Link>
@@ -142,7 +150,7 @@ const Navbar = () => {
                 "text-gray-400": pathname !== "/about",
               })}
             >
-              About me
+              About
             </Link>
           </li>
         </ul>

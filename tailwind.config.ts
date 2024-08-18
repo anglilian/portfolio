@@ -34,7 +34,6 @@ const config: Config = {
     extend: {
       colors: {
         primaryColor: "rgb(var(--primary-rgb))",
-        secondaryColor: "rgb(var(--secondary-rgb))",
         foregroundColor: "rgb(var(--foreground-rgb))",
         backgroundColor: "rgb(var(--background-rgb))",
       },

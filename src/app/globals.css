@@ -6,13 +6,16 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 248, 248, 237;
   --primary-rgb: 255, 69, 0;
-  --secondary-rgb: 255, 215, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   @apply text-xl font-normal;
+}
+
+h1 {
+  @apply text-2xl font-bold;
 }
 
 @layer utilities {

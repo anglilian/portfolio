@@ -6,7 +6,6 @@ import Image from "next/image";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory } from "@/constants/skillColours";
 import { useRouter } from "next/navigation";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const router = useRouter();
@@ -50,7 +49,7 @@ export default function Home() {
         selectedCategory="all"
         onCategoryClick={handleCategoryClick}
       />
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }

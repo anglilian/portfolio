@@ -8,7 +8,7 @@ export default async function Blog() {
   const posts: NotionPost[] = await notionService.getPublishedBlogPosts();
 
   return (
-    <main className="min-h-screen p-8">
+    <main>
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center justify-center">
           <article className="prose">

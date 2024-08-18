@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { nunito } from "@/components/fonts";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Ang Li-Lian",
@@ -23,7 +24,8 @@ export default function RootLayout({
       <body className={`${nunito.className} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          {children}
+          <main className="flex-grow p-8">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

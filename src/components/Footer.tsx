@@ -25,7 +25,7 @@ const icons = [
 
 const Footer = () => {
   return (
-    <div className="space-y-6 mt-4">
+    <div className="space-y-6 mt-4 mb-8">
       <div className="container mx-auto flex justify-center">
         <IconRow icons={icons} />
       </div>

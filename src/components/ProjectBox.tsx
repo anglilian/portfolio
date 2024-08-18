@@ -34,7 +34,10 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
   }
 
   return (
-    <Link href={`/projects/${slug}`}>
+    <Link
+      href={`/projects/${slug}`}
+      className="transition duration-300 hover:scale-105"
+    >
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="relative pb-[66.67%]">
           <Image
@@ -47,7 +50,7 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-6">
             <h2 className="font-bold text-2xl text-white">{title}</h2>
-            <div className="flex-wrap flex space-x-2 text-gray-300 text-lg">
+            <div className="flex-wrap flex space-x-4 text-gray-300 text-lg">
               <p>
                 {formattedStartDate}
                 {formattedEndDate && ` - ${formattedEndDate}`}
