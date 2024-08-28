@@ -16,6 +16,10 @@ export const metadata: ProjectMetadata = {
       name: "Python",
       category: "coding" as SkillCategory,
     },
+    {
+      name: "Writing",
+      category: "writing" as SkillCategory,
+    },
   ],
   imageSrc: "/images/capstone.png",
 };
