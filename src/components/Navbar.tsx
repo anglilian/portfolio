@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-md py-4 p-2">
+    <nav className="shadow-md py-4 p-2 mb-8">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" passHref>
           <div className="flex items-center">

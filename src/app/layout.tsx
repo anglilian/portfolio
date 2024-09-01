@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${nunito.className} antialiased`}>
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow p-8">{children}</main>
+          <main className="flex-grow p-6">{children}</main>
           <Footer />
         </div>
       </body>
