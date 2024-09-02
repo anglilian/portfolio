@@ -1,10 +1,10 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import Markdown from "react-markdown";
 import NotionService from "@/constants/notion-service";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // GitHub Flavored Markdown (supports tables, strikethrough, etc.)
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
-import { GetServerSideProps } from "next";
 
 const schema = {
   ...defaultSchema,
@@ -26,9 +26,25 @@ const schema = {
   },
 };
 
+type PostPageProps = {
+  params: { slug: string };
+};
+
+// Use this to fetch all slugs to generate static paths
+export async function generateStaticParams() {
+  const notionService = new NotionService();
+  const posts = await notionService.getPublishedBlogPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 function convertMarkdownToEmbed(markdown: string): string {
+  // Match [video](https://youtu.be/ID) and convert to iframe
   const youtubeEmbedRegex =
     /\[video\]\((https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+))\)/g;
+  // Match [spotify](https://open.spotify.com/...) and convert to iframe
   const spotifyEmbedRegex =
     /\[spotify\]\((https:\/\/open\.spotify\.com\/(track|album|playlist|episode)\/[\w-]+)\)/g;
 
@@ -46,23 +62,15 @@ function convertMarkdownToEmbed(markdown: string): string {
     });
 }
 
-type PostPageProps = {
-  post: any;
-  markdown: string;
-  nextPost: any;
-};
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { slug } = context.params as { slug: string };
+export default async function PostPage({ params }: PostPageProps) {
+  const { slug } = params;
   const notionService = new NotionService();
 
   const posts = await notionService.getPublishedBlogPosts();
   const postData = await notionService.getSingleBlogPost(slug);
 
   if (!postData) {
-    return {
-      notFound: true,
-    };
+    notFound(); // Automatically show a 404 page if the post is not found
   }
 
   let { markdown, post } = postData;
@@ -77,16 +85,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       ? posts[currentIndex + 1]
       : posts[0]; // Loop back to the first post
 
-  return {
-    props: {
-      post,
-      markdown,
-      nextPost,
-    },
-  };
-};
-
-export default function PostPage({ post, markdown, nextPost }: PostPageProps) {
   return (
     <div className="min-h-screen">
       <main className="max-w-4xl mx-auto relative">
