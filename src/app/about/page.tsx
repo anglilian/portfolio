@@ -46,15 +46,19 @@ export default function About() {
           <div className="section-div">
             <h1 className=" bg-pink-600 section-title">interests</h1>
           </div>
-          <div className="w-3/4">
+          <div className="w-3/4 space-y-2">
             <p>
-              I did long distance running while I was in school, moved on to
-              yoga in university, did bouldering for two years then decided to
-              try something new. I had always wanted to learn a martial arts and
-              am grateful to be training with{" "}
+              I did long distance running while I was in school. Then focused on
+              yoga everyday for 6 months (now I can touch my toes!). Towards the
+              end of uni, I bouldered for two years to build strength and make
+              friends.
+            </p>
+            <p>
+              Since I moved to the UK, I&apos;ve been training BJJ with{" "}
               <a href="https://www.bjjlondon.com/">Carlson Gracie London</a>{" "}
-              (oss!) since I moved to the UK. My goal for 2024 is to compete
-              twice!
+              (oss!) to learn how to operate under pressure and because
+              I&apos;ve always wanted to praactice martial arts. My goal for
+              2024 is to compete twice!
             </p>
           </div>
         </section>
