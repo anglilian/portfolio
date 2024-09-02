@@ -41,12 +41,12 @@ export async function generateStaticParams() {
 }
 
 function convertMarkdownToEmbed(markdown: string): string {
-  // Match [video](https://youtu.be/ID) and convert to iframe
   const youtubeEmbedRegex =
     /\[video\]\((https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+))\)/g;
-  // Match [spotify](https://open.spotify.com/...) and convert to iframe
   const spotifyEmbedRegex =
     /\[spotify\]\((https:\/\/open\.spotify\.com\/(track|album|playlist|episode)\/[\w-]+)\)/g;
+
+  const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s]+)\)/g;
 
   return markdown
     .replace(youtubeEmbedRegex, (match, url, videoId) => {
@@ -59,6 +59,10 @@ function convertMarkdownToEmbed(markdown: string): string {
         "open.spotify.com/embed/"
       );
       return `<iframe src="${embedUrl}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
+    })
+    .replace(imageRegex, (match, altText, url) => {
+      const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(url)}`;
+      return `![${altText}](${proxyUrl})`;
     });
 }
 
