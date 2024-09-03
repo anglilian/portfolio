@@ -46,8 +46,6 @@ function convertMarkdownToEmbed(markdown: string): string {
   const spotifyEmbedRegex =
     /\[spotify\]\((https:\/\/open\.spotify\.com\/(track|album|playlist|episode)\/[\w-]+)\)/g;
 
-  const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s]+)\)/g;
-
   return markdown
     .replace(youtubeEmbedRegex, (match, url, videoId) => {
       const embedUrl = `https://www.youtube.com/embed/${videoId}`;
@@ -59,10 +57,6 @@ function convertMarkdownToEmbed(markdown: string): string {
         "open.spotify.com/embed/"
       );
       return `<iframe src="${embedUrl}" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`;
-    })
-    .replace(imageRegex, (match, altText, url) => {
-      const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(url)}`;
-      return `![${altText}](${proxyUrl})`;
     });
 }
 
@@ -95,6 +89,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="flex flex-col items-center justify-center space-y-8">
           <article className="prose">
             <h1>{post.title}</h1>
+            <p>{post.date}</p>
             <Markdown
               rehypePlugins={[[rehypeRaw], [rehypeSanitize, schema]]} // Pass the custom schema
               remarkPlugins={[remarkGfm]} // Support tables, task lists, etc.

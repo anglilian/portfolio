@@ -2,6 +2,8 @@
 import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 import { NotionPost, PostPage } from "@/types/blogs";
+import uploadNotionImagesToCloudinary from "upload-notion-images-to-cloudinary";
+import { revalidatePath } from "next/cache";
 
 export default class NotionService {
   client: Client;
@@ -63,6 +65,20 @@ export default class NotionService {
     markdown = this.n2m.toMarkdownString(mdBlocks).parent;
 
     post = NotionService.pageToPostTransformer(page);
+
+    if (!process.env.NOTION_API_KEY || !process.env.CLOUDINARY_URL) {
+      throw new Error("Required environment variables are missing");
+    }
+
+    await uploadNotionImagesToCloudinary({
+      notionToken: process.env.NOTION_API_KEY,
+      notionPageId: page.id,
+      cloudinaryUrl: process.env.CLOUDINARY_URL,
+      cloudinaryUploadFolder: process.env.CLOUDINARY_UPLOAD_FOLDER,
+      logLevel: "debug",
+    });
+
+    revalidatePath(`/blog/${slug}`);
 
     return {
       post,
