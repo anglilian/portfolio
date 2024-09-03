@@ -10,7 +10,7 @@ export default class NotionService {
   n2m: NotionToMarkdown;
 
   constructor() {
-    this.client = new Client({ auth: process.env.NOTION_API_KEY });
+    this.client = new Client({ auth: process.env.NOTION_TOKEN });
     this.n2m = new NotionToMarkdown({ notionClient: this.client });
   }
 
@@ -66,12 +66,12 @@ export default class NotionService {
 
     post = NotionService.pageToPostTransformer(page);
 
-    if (!process.env.NOTION_API_KEY || !process.env.CLOUDINARY_URL) {
+    if (!process.env.NOTION_TOKEN || !process.env.CLOUDINARY_URL) {
       throw new Error("Required environment variables are missing");
     }
 
     await uploadNotionImagesToCloudinary({
-      notionToken: process.env.NOTION_API_KEY,
+      notionToken: process.env.NOTION_TOKEN,
       notionPageId: page.id,
       cloudinaryUrl: process.env.CLOUDINARY_URL,
       cloudinaryUploadFolder: process.env.CLOUDINARY_UPLOAD_FOLDER,
