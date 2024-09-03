@@ -5,6 +5,7 @@ import NotionService from "@/constants/notion-service";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // GitHub Flavored Markdown (supports tables, strikethrough, etc.)
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import dayjs from "dayjs";
 
 const schema = {
   ...defaultSchema,
@@ -83,13 +84,16 @@ export default async function PostPage({ params }: PostPageProps) {
       ? posts[currentIndex + 1]
       : posts[0]; // Loop back to the first post
 
+  // Format the date
+  const formattedDate = dayjs(post.date).format("MMM D, YYYY");
+
   return (
     <div className="min-h-screen">
       <main className="max-w-4xl mx-auto relative">
         <div className="flex flex-col items-center justify-center space-y-8">
           <article className="prose">
+            <p className="text-gray-500 text-sm">{formattedDate}</p>
             <h1>{post.title}</h1>
-            <p>{post.date}</p>
             <Markdown
               rehypePlugins={[[rehypeRaw], [rehypeSanitize, schema]]} // Pass the custom schema
               remarkPlugins={[remarkGfm]} // Support tables, task lists, etc.

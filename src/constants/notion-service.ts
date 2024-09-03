@@ -91,7 +91,7 @@ export default class NotionService {
       id: page.id,
       slug: page.properties.Slug.formula.string,
       title: page.properties.Name.title[0].plain_text,
-      date: page.properties.Created.created_time,
+      date: page.properties.Created.formula.date.start,
     };
   }
 }
