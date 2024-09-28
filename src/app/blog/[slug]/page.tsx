@@ -5,6 +5,9 @@ import NotionService from "@/constants/notion-service";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm"; // GitHub Flavored Markdown (supports tables, strikethrough, etc.)
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css"; // Import KaTeX CSS for styling formulas
 import dayjs from "dayjs";
 
 const schema = {
@@ -95,8 +98,12 @@ export default async function PostPage({ params }: PostPageProps) {
             <p className="text-gray-500 text-sm">{formattedDate}</p>
             <h1>{post.title}</h1>
             <Markdown
-              rehypePlugins={[[rehypeRaw], [rehypeSanitize, schema]]} // Pass the custom schema
-              remarkPlugins={[remarkGfm]} // Support tables, task lists, etc.
+              rehypePlugins={[
+                [rehypeRaw],
+                [rehypeSanitize, schema],
+                rehypeKatex,
+              ]}
+              remarkPlugins={[remarkGfm, remarkMath]}
             >
               {markdown}
             </Markdown>
