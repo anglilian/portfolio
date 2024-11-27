@@ -4,15 +4,11 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import QuoteBox from "@/components/QuoteBox";
 import ImageWithCaption from "@/components/ImageWithCaption";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -36,7 +32,7 @@ const ProjectContent = () => {
           out.
         </p>
         <ImageWithCaption
-          src="/images/blind-minervating-process.png"
+          src="/images/projects/blind-minervating/process.png"
           alt="Workflow for matching people up!"
         ></ImageWithCaption>
         <p>

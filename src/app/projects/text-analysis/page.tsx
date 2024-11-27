@@ -4,24 +4,32 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   const tsImages = [
-    { src: "/images/word-cloud.png", alt: "Word cloud" },
-    { src: "/images/freq-diagram.png", alt: "Frequency diagram" },
-    { src: "/images/sentiment-analysis.png", alt: "Sentiment analysis" },
+    { src: "/images/projects/text-analysis/word-cloud.png", alt: "Word cloud" },
+    {
+      src: "/images/projects/text-analysis/freq-diagram.png",
+      alt: "Frequency diagram",
+    },
+    {
+      src: "/images/projects/text-analysis/sentiment-analysis.png",
+      alt: "Sentiment analysis",
+    },
     // Add more images as needed
   ];
 
   const gutenbergImages = [
-    { src: "/images/verb.png", alt: "Proportion of verb tenses" },
-    { src: "/images/text-analysis.png", alt: "Text analysis" },
+    {
+      src: "/images/projects/text-analysis/verb.png",
+      alt: "Proportion of verb tenses",
+    },
+    {
+      src: "/images/projects/text-analysis/text-analysis.png",
+      alt: "Text analysis",
+    },
     // Add more images as needed
   ];
 

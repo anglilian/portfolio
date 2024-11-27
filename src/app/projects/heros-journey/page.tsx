@@ -4,14 +4,10 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />

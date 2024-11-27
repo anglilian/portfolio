@@ -4,22 +4,17 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 
 const images = [
-  { src: "/images/link-1.jpg", alt: "Photos from the event" },
-  { src: "/images/link-2.jpg", alt: "Photos from the event" },
-  { src: "/images/link-3.jpg", alt: "Photos from the event" },
-  { src: "/images/link-4.jpg", alt: "Photos from the event" },
+  { src: "/images/projects/fall-masquerade-ball/1.jpg", alt: "Event photo" },
+  { src: "/images/projects/fall-masquerade-ball/2.jpg", alt: "Event photo" },
+  { src: "/images/projects/fall-masquerade-ball/3.jpg", alt: "Event photo" },
 ];
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -49,7 +44,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Liberty in North Korea"
-          imageSrc="/images/link-logo.png"
+          imageSrc="/images/shared/logos/link-logo.png"
           link="https://www.libertyinnorthkorea.org/"
         >
           <p>
@@ -61,7 +56,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="AmongUs"
-          imageSrc="/images/amongus.png"
+          imageSrc="/images/shared/logos/amongus.png"
           link="https://amongusatminerva.wixsite.com/amongus"
         >
           <p>

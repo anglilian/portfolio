@@ -3,7 +3,6 @@
 import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
-import { useRouter } from "next/navigation";
 
 import ProjectHeader from "@/components/ProjectHeader";
 import QuoteBox from "@/components/QuoteBox";
@@ -16,7 +15,6 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons"; // Import globe ico
 import IconRow from "@/components/IconRow"; // Import the IconRow component
 
 const ProjectContent = () => {
-  const router = useRouter();
   const icons = [
     {
       icon: faInstagram,

@@ -4,14 +4,10 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import Image from "next/image";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -19,20 +15,20 @@ const ProjectContent = () => {
         <div className="flex justify-center items-center space-x-2 shadow-md">
           <div className="w-1/2">
             <Image
-              src="/images/fear-the-wolves.png" // Path to your first image
+              src="/images/projects/fear-the-wolves/fear-the-wolves.png"
               alt="I do not fear the wolves"
-              width={500} // Set desired width
-              height={300} // Set desired height
-              layout="responsive" // Makes the image responsive
+              width={500}
+              height={300}
+              layout="responsive"
             />
           </div>
           <div className="w-1/2">
             <Image
-              src="/images/for-they-are-mine.png" // Path to your second image
+              src="/images/projects/fear-the-wolves/for-they-are-mine.png"
               alt="for they are mine"
-              width={500} // Set desired width
-              height={300} // Set desired height
-              layout="responsive" // Makes the image responsive
+              width={500}
+              height={300}
+              layout="responsive"
             />
           </div>
         </div>

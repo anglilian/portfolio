@@ -4,24 +4,20 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 import QuoteBox from "@/components/QuoteBox";
 
 const images = [
-  { src: "/images/samgakji-1.png", alt: "Screenshots from game" },
-  { src: "/images/samgakji-2.png", alt: "Screenshots from game" },
-  { src: "/images/samgakji-3.png", alt: "Screenshots from game" },
-  { src: "/images/samgakji-4.png", alt: "Screenshots from game" },
+  { src: "/images/projects/samgakji/1.png", alt: "Screenshots from game" },
+  { src: "/images/projects/samgakji/2.png", alt: "Screenshots from game" },
+  { src: "/images/projects/samgakji/3.png", alt: "Screenshots from game" },
+  { src: "/images/projects/samgakji/4.png", alt: "Screenshots from game" },
   // Add more images as needed
 ];
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -65,7 +61,7 @@ It was a privilege to work with Yongsan Legacy Project. We hope that you try out
         <hr></hr>
         <Section
           title="Yongsan Legacy"
-          imageSrc="/images/yongsan-logo.jpg"
+          imageSrc="/images/shared/logos/yongsan-legacy.jpg"
           link="https://yongsanlegacy.org/"
         >
           <p>Preserving the invaluable treasures of Yongsan Garrison</p>

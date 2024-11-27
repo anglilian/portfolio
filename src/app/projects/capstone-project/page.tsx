@@ -4,8 +4,6 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import ImageWithCaption from "@/components/ImageWithCaption";
 import Section from "@/components/Section";
@@ -16,8 +14,6 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import QuoteBox from "@/components/QuoteBox";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   const icons = [
     {
       icon: faGithub,
@@ -64,14 +60,14 @@ const ProjectContent = () => {
           author="Abstract"
         ></QuoteBox>
         <ImageWithCaption
-          src="/images/capstone-exec-summary.png"
+          src="/images/projects/capstone/exec-summary.png"
           alt="Capstone executive summary"
         ></ImageWithCaption>
       </section>
       <footer className="project-footer">
         <hr></hr>
         <Section
-          imageSrc="/images/minerva.png"
+          imageSrc="/images/shared/logos/minerva.png"
           title="Minerva University"
           link="https://minerva.edu"
         >

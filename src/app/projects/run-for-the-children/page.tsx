@@ -51,7 +51,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Women's Aid Organisation"
-          imageSrc="/images/wao.jpg"
+          imageSrc="/images/shared/logos/wao.jpg"
           link="https://wao.org.my/"
         >
           <p>
@@ -60,9 +60,8 @@ const ProjectContent = () => {
           </p>
         </Section>
         <Section
-          title="Leo Club of Sri Kuala Lumpur
-"
-          imageSrc="/images/leo-club-skl.jpg"
+          title="Leo Club of Sri Kuala Lumpur"
+          imageSrc="/images/shared/logos/leo-club-skl.jpg"
           link="https://www.facebook.com/sriklleoclub"
         >
           <p>

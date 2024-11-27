@@ -4,15 +4,11 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import Section from "@/components/Section";
 import ImageWithCaption from "@/components/ImageWithCaption";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -34,15 +30,15 @@ const ProjectContent = () => {
           The question was what else could I do now?
         </p>
         <ImageWithCaption
-          src="/images/rftc-shirt.jpg"
-          alt="I designed that shirt! It was one of my very first forays into digital art back when I was still using Paint.net."
+          src="/images/projects/leo-quidditch/rftc-shirt.jpg"
+          alt="I designed that shirt!"
         ></ImageWithCaption>
       </section>
       <footer className="project-footer">
         <hr></hr>
         <Section
           title="Make-A-Wish Malaysia"
-          imageSrc="/images/make-a-wish.jpg"
+          imageSrc="/images/shared/logos/make-a-wish.jpg"
           link="https://makeawish.org.my/"
         >
           <p>
@@ -51,9 +47,8 @@ const ProjectContent = () => {
           </p>
         </Section>
         <Section
-          title="Leo Club of Sri Kuala Lumpur
-"
-          imageSrc="/images/leo-club-skl.jpg"
+          title="Leo Club of Sri Kuala Lumpur"
+          imageSrc="/images/shared/logos/leo-club-skl.jpg"
           link="https://www.facebook.com/sriklleoclub"
         >
           <p>

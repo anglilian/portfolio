@@ -49,7 +49,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="West Midlands Combined Authority"
-          imageSrc="/images/wmca.png"
+          imageSrc="/images/shared/logos/wmca.png"
           link="https://www.wmca.org.uk/"
         >
           <p>
@@ -61,7 +61,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="Pure Leapfrog"
-          imageSrc="/images/pure-leapfrog.jpg"
+          imageSrc="/images/shared/logos/pure-leapfrog.jpg"
           link="https://www.pureleapfrog.org/"
         >
           <p>

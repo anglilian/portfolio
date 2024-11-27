@@ -4,14 +4,10 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import ProjectHeader from "@/components/ProjectHeader";
 import Section from "@/components/Section";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
@@ -27,7 +23,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Type Thursday"
-          imageSrc="/images/typethursday.png"
+          imageSrc="/images/shared/logos/typethursday.png"
           link="https://www.typethursday.org/san-francisco"
         >
           <p>

@@ -38,15 +38,15 @@ const ProjectContent = () => {
         </p>
         <p>48 hours of coding later. Here&apos;s how far I got.</p>
         <ImageWithCaption
-          src="/images/lovelace.gif"
+          src="/images/projects/seek-the-treasure/lovelace.gif"
           alt="Hand-drawn character design and animation based on Ada Lovelace."
-        ></ImageWithCaption>
+        />
       </section>
       <footer className="project-footer">
         <hr></hr>
         <Section
           title="Creatica"
-          imageSrc="/images/creatica.png"
+          imageSrc="/images/shared/logos/creatica.png"
           link="https://www.creatica.io/"
         >
           <p>

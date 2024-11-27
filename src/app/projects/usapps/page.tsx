@@ -4,22 +4,21 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
 import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 
 const images = [
-  { src: "/images/usapps-core.jpeg", alt: "Core committee" },
-  { src: "/images/usapps-alumni-interview.png", alt: "Alumni panel" },
-  { src: "/images/usapps-killer-essay.jpeg", alt: "Killer essay workshop" },
+  { src: "/images/projects/usapps/core.jpeg", alt: "Core committee" },
+  { src: "/images/projects/usapps/alumni-interview.png", alt: "Alumni panel" },
+  {
+    src: "/images/projects/usapps/killer-essay.jpeg",
+    alt: "Killer essay workshop",
+  },
   // Add more images as needed
 ];
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />
