@@ -18,17 +18,17 @@ const ProjectContent = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            "Year in Books"
+            &ldquo;Year in Books&rdquo;
           </a>{" "}
           feature. I wanted to create a more positive closing experience to the
           year, similar to how Spotify Wrapped creates excitement and nostalgia.
         </p>
         <p>
-          I've rebuilt this app several times mostly because I didn't properly
-          plan out my app before I started and I wasn't properly leveraging AI
-          tools. I intend to write a blog post which details the process and
-          I'll link it here when that's up, but for now, please enjoy reflecting
-          on your reading journey for the year!
+          I&apos;ve rebuilt this app several times mostly because I didn&apos;t
+          properly plan out my app before I started and I wasn&apos;t properly
+          leveraging AI tools. I intend to write a blog post which details the
+          process and I&apos;ll link it here when that&apos;s up, but for now,
+          please enjoy reflecting on your reading journey for the year!
         </p>
       </section>
     </div>
