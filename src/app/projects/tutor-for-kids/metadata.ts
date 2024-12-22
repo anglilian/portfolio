@@ -11,7 +11,7 @@ export const metadata: ProjectMetadata = {
   skills: [
     {
       name: "education",
-      category: "coding" as SkillCategory,
+      category: "education" as SkillCategory,
     },
     {
       name: "Event organising",

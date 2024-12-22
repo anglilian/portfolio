@@ -21,5 +21,5 @@ export const metadata: ProjectMetadata = {
       category: "writing" as SkillCategory,
     },
   ],
-  imageSrc: "/images/projects/capstone-project/capstone.png",
+  imageSrc: "/images/projects/capstone/capstone.png",
 };
