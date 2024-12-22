@@ -11,8 +11,8 @@ export const metadata: ProjectMetadata = {
       category: "coding" as SkillCategory,
     },
   ],
-  imageSrc: "/images/text-analysis.png",
-  bannerImage: "/images/text-analysis.png",
+  imageSrc: "/images/projects/text-analysis/text-analysis.png",
+  bannerImage: "/images/projects/text-analysis/text-analysis.png",
   link: "https://github.com/anglilian/Taylor-Swift-Lyric-Analysis",
   linkLabel: "See code",
 };

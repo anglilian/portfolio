@@ -14,8 +14,8 @@ export const metadata: ProjectMetadata = {
       category: "education" as SkillCategory,
     },
   ],
-  imageSrc: "/images/manai.jpg",
-  bannerImage: "/images/manai.jpg",
+  imageSrc: "/images/projects/manai/manai.jpg",
+  bannerImage: "/images/projects/manai/manai.jpg",
   link: "https://manai.me/documents/2019report_EN.pdf",
   linkLabel: "Read the report",
 };

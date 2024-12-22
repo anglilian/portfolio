@@ -76,7 +76,7 @@ const ProjectContent = () => {
         <IconRow icons={icons} />
         <Section
           title="Rose Hack"
-          imageSrc="/images/rosehack.png"
+          imageSrc="/images/logos/rosehack.png"
           link="https://rosehack.com/"
         >
           <p>

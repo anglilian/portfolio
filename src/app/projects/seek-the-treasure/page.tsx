@@ -46,7 +46,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Creatica"
-          imageSrc="/images/shared/logos/creatica.png"
+          imageSrc="/imagesw/logos/creatica.png"
           link="https://www.creatica.io/"
         >
           <p>

@@ -49,7 +49,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Maxis Berhad"
-          imageSrc="/images/maxis-logo.png"
+          imageSrc="/images/logos/maxis-logo.png"
           link="https://www.maxis.com.my/en/about-maxis/corporate-responsibility/ekelas/ekelas-introduction/"
         >
           <p>
@@ -59,7 +59,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="Sunago"
-          imageSrc="/images/sunago.png"
+          imageSrc="/images/logos/sunago.png"
           link="https://www.sunagoeducation.com/"
         >
           <p>

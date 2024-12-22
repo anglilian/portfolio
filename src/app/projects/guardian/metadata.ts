@@ -13,8 +13,7 @@ export const metadata: ProjectMetadata = {
     },
     { name: "Figma", category: "creative" as SkillCategory },
   ],
-  imageSrc: "/images/guardian.png",
-  // bannerImage: "/images/guardian.png",
+  imageSrc: "/images/projects/guardian/guardian.png",
   link: "https://www.figma.com/proto/dUWeaGznbFTMhIwgLJTkdk/Guardian?node-id=47%3A25&scaling=scale-down",
   linkLabel: "Try me!",
 };

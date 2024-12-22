@@ -22,7 +22,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Expanding Circles"
-          imageSrc="/images/expanding-circles.png"
+          imageSrc="/images/logos/expanding-circles.png"
           link="https://www.expandingcircles.co/"
         >
           <p>

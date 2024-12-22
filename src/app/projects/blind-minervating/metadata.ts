@@ -12,6 +12,6 @@ export const metadata: ProjectMetadata = {
       category: "events" as SkillCategory,
     },
   ],
-  imageSrc: "/images/blind-minervating.png",
-  bannerImage: "/images/blind-minervating.png",
+  imageSrc: "/images/projects/blind-minervating/blind-minervating.png",
+  bannerImage: "/images/projects/blind-minervating/blind-minervating.png",
 };

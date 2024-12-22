@@ -67,7 +67,7 @@ const ProjectContent = () => {
       <footer className="project-footer">
         <hr></hr>
         <Section
-          imageSrc="/images/shared/logos/minerva.png"
+          imageSrc="/images/logos/minerva.png"
           title="Minerva University"
           link="https://minerva.edu"
         >

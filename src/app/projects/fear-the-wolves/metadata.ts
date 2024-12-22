@@ -12,5 +12,5 @@ export const metadata: ProjectMetadata = {
       category: "creative" as SkillCategory,
     },
   ],
-  imageSrc: "/images/fear-the-wolves.png",
+  imageSrc: "/images/projects/fear-the-wolves/fear-the-wolves.png",
 };

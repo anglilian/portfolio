@@ -4,16 +4,11 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
-import { useRouter } from "next/navigation";
-
-import Section from "@/components/Section";
 import ProjectHeader from "@/components/ProjectHeader";
 import QuoteBox from "@/components/QuoteBox";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const ProjectContent = () => {
-  const router = useRouter();
-
   return (
     <div>
       <ProjectHeader metadata={metadata} />

@@ -12,7 +12,7 @@ export const metadata: ProjectMetadata = {
     },
     { name: "Illustrator", category: "creative" as SkillCategory },
   ],
-  imageSrc: "/images/seek-the-treasure.png",
+  imageSrc: "/images/projects/seek-the-treasure/seek-the-treasure.png",
   link: "https://github.com/lianlaughsalot/SeektheTreasure",
   linkLabel: "Try me!",
 };

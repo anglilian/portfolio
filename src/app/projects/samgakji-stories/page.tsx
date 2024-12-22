@@ -61,7 +61,7 @@ It was a privilege to work with Yongsan Legacy Project. We hope that you try out
         <hr></hr>
         <Section
           title="Yongsan Legacy"
-          imageSrc="/images/shared/logos/yongsan-legacy.jpg"
+          imageSrc="/images/logos/yongsan-legacy.jpg"
           link="https://yongsanlegacy.org/"
         >
           <p>Preserving the invaluable treasures of Yongsan Garrison</p>

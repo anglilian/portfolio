@@ -13,7 +13,7 @@ export const metadata: ProjectMetadata = {
       category: "coding" as SkillCategory,
     },
   ],
-  imageSrc: "/images/dssg.jpg",
+  imageSrc: "/images/projects/dssg/dssg.jpg",
   link: "https://github.com/DSSGxUK/s22_wmca",
   linkLabel: "GitHub repo",
 };

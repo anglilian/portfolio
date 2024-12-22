@@ -11,8 +11,7 @@ export const metadata: ProjectMetadata = {
     { name: "Writing", category: "writing" as SkillCategory },
     { name: "History", category: "education" as SkillCategory },
   ],
-  imageSrc: "/images/samgakji-1.png",
-  // bannerImage: "/images/samgakji-1.png",
+  imageSrc: "/images/projects/samgakji-stories/samgakji-1.png",
   link: "http://samgakjistories.yongsanlegacy.org/",
   linkLabel: "Play",
 };

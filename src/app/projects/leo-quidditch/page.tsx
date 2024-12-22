@@ -38,7 +38,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Make-A-Wish Malaysia"
-          imageSrc="/images/shared/logos/make-a-wish.jpg"
+          imageSrc="/images/logos/make-a-wish.jpg"
           link="https://makeawish.org.my/"
         >
           <p>
@@ -48,7 +48,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="Leo Club of Sri Kuala Lumpur"
-          imageSrc="/images/shared/logos/leo-club-skl.jpg"
+          imageSrc="/images/logos/leo-club-skl.jpg"
           link="https://www.facebook.com/sriklleoclub"
         >
           <p>

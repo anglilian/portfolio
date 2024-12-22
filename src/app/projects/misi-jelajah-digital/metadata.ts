@@ -11,6 +11,6 @@ export const metadata: ProjectMetadata = {
     { name: "Audio visual production", category: "creative" as SkillCategory },
     { name: "Coding", category: "education" as SkillCategory },
   ],
-  imageSrc: "/images/misi-jelajah-digital.png",
-  bannerImage: "/images/misi-jelajah-digital.png",
+  imageSrc: "/images/projects/misi-jelajah-digital/misi-jelajah-digital.png",
+  bannerImage: "/images/projects/misi-jelajah-digital/misi-jelajah-digital.png",
 };

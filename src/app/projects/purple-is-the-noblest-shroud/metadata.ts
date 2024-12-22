@@ -10,8 +10,8 @@ export const metadata: ProjectMetadata = {
     { name: "Historical fiction", category: "writing" as SkillCategory },
     { name: "History", category: "education" as SkillCategory },
   ],
-  imageSrc: "/images/purple-shroud.jpg",
-  bannerImage: "/images/book-banner.png",
+  imageSrc: "/images/projects/purple-is-the-noblest-shroud/purple-shroud.jpg",
+  bannerImage: "/images/projects/purple-is-the-noblest-shroud/book-banner.png",
   link: "https://www.amazon.com/dp/9671942709",
   linkLabel: "Get your copy",
 };

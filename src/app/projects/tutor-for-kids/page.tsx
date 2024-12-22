@@ -45,7 +45,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Leo Club of Subang Jaya Alumni"
-          imageSrc="/images/sja.jpeg"
+          imageSrc="/images/logos/sja.jpeg"
           link="https://www.instagram.com/leoclubsja/"
         >
           <p>

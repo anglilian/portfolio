@@ -57,7 +57,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Manai institute of science & technology"
-          imageSrc="/images/manai-logo.png"
+          imageSrc="/images/logos/manai-logo.png"
           link="https://manai.me/"
         >
           <p>
@@ -68,7 +68,7 @@ const ProjectContent = () => {
         <Section
           title="Mistletoe inc.
 "
-          imageSrc="/images/mistletoe-logo.png"
+          imageSrc="/images/logos/mistletoe-logo.png"
           link="http://mistletoe.co/en/"
         >
           <p>

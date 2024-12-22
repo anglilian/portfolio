@@ -17,6 +17,6 @@ export const metadata: ProjectMetadata = {
       category: "events" as SkillCategory,
     },
   ],
-  imageSrc: "/images/sxsw.png",
-  bannerImage: "/images/sxsw.png",
+  imageSrc: "/images/projects/sxsw-edu/sxsw.png",
+  bannerImage: "/images/projects/sxsw-edu/sxsw.png",
 };

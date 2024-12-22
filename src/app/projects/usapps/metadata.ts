@@ -11,6 +11,6 @@ export const metadata: ProjectMetadata = {
     { name: "Event planning", category: "events" as SkillCategory },
     { name: "Education", category: "education" as SkillCategory },
   ],
-  imageSrc: "/images/usapps-banner.png",
-  bannerImage: "/images/usapps-banner.png",
+  imageSrc: "/images/projects/usapps/usapps-banner.png",
+  bannerImage: "/images/projects/usapps/usapps-banner.png",
 };

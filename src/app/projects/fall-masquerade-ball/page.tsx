@@ -44,7 +44,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Liberty in North Korea"
-          imageSrc="/images/shared/logos/link-logo.png"
+          imageSrc="/images/logos/link-logo.png"
           link="https://www.libertyinnorthkorea.org/"
         >
           <p>
@@ -56,7 +56,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="AmongUs"
-          imageSrc="/images/shared/logos/amongus.png"
+          imageSrc="/images/logos/amongus.png"
           link="https://amongusatminerva.wixsite.com/amongus"
         >
           <p>

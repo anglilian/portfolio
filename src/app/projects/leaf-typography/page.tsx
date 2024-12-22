@@ -23,7 +23,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Type Thursday"
-          imageSrc="/images/shared/logos/typethursday.png"
+          imageSrc="/images/logos/typethursday.png"
           link="https://www.typethursday.org/san-francisco"
         >
           <p>

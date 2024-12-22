@@ -18,6 +18,6 @@ export const metadata: ProjectMetadata = {
       category: "events" as SkillCategory,
     },
   ],
-  imageSrc: "/images/tutor-for-kids.jpg",
-  bannerImage: "/images/tutor-for-kids.jpg",
+  imageSrc: "/images/projects/tutor-for-kids/tutor-for-kids.jpg",
+  bannerImage: "/images/projects/tutor-for-kids/tutor-for-kids.jpg",
 };

@@ -10,6 +10,6 @@ export const metadata: ProjectMetadata = {
   skills: [{ name: "Podcast editting", category: "creative" as SkillCategory }],
   link: "https://anchor.fm/humans-of-minerva/",
   linkLabel: "Listen to the podcast",
-  bannerImage: "/images/hom-banner.png",
-  imageSrc: "/images/humans-of-minerva.png",
+  bannerImage: "/images/projects/humans-of-minerva/hom-banner.png",
+  imageSrc: "/images/projects/humans-of-minerva/humans-of-minerva.png",
 };

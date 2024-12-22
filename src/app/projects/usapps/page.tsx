@@ -57,7 +57,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="USAPPS"
-          imageSrc="/images/usapps-logo.png"
+          imageSrc="/images/logos/usapps-logo.png"
           link="https://www.usapps.org/"
         >
           <p>Helping Malaysian dreamers who want to study in the USA.</p>

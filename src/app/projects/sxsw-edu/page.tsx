@@ -27,7 +27,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="SXSW Edu"
-          imageSrc="/images/sxsw-logo.png"
+          imageSrc="/images/logos/sxsw-logo.png"
           link="https://www.sxswedu.com/"
         >
           <p>

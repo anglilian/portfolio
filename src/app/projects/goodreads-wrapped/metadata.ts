@@ -8,8 +8,8 @@ export const metadata: ProjectMetadata = {
   skills: [
     { name: "Next.js, TypeScript", category: "coding" as SkillCategory },
   ],
-  imageSrc: "/images/goodreads-wrapped.png",
-  bannerImage: "/images/goodreads-wrapped.png",
+  imageSrc: "/images/projects/goodreads-wrapped/goodreads-wrapped.png",
+  bannerImage: "/images/projects/goodreads-wrapped/goodreads-wrapped.png",
   link: "https://goodreads-wrapped.anglilian.com/",
   linkLabel: "Try it out!",
 };

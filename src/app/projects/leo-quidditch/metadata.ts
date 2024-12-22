@@ -13,8 +13,8 @@ export const metadata: ProjectMetadata = {
       category: "events" as SkillCategory,
     },
   ],
-  imageSrc: "/images/quidditch.jpg",
-  bannerImage: "/images/quidditch.jpg",
+  imageSrc: "/images/projects/leo-quidditch/quidditch.jpg",
+  bannerImage: "/images/projects/leo-quidditch/quidditch.jpg",
   link: "https://quidditchpost.blogspot.com/2015/09/sri-kl-hosts-malaysias-biggest.html",
   linkLabel: "Read the article",
 };
