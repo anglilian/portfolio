@@ -88,8 +88,14 @@ How did she do it?"
         </p>
         <p>
           The new wave of information knocked my entire conception of Theodora
-          sideways, so much so that I rewrote the entire novel in 35 days. I
-          powered through thousands of words a day and spent months after
+          sideways, so much so that{" "}
+          <a
+            href="https://anglilian.com/blog/i-wrote-3000-words-a-day-for-35-days"
+            target="_blank"
+          >
+            I rewrote the entire novel in 35 days
+          </a>
+          . I powered through thousands of words a day and spent months after
           refining it into the nearly 100,000 word behemoth you see today.
         </p>
         <p>

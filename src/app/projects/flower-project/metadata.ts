@@ -13,5 +13,5 @@ export const metadata: ProjectMetadata = {
     },
   ],
   imageSrc: "/images/projects/flower-project/flower-project.png",
-  bannerImage: "/images/projects/flower-project/sflower-project.png",
+  bannerImage: "/images/projects/flower-project/flower-project.png",
 };

@@ -37,7 +37,7 @@ const ProjectContent = () => {
         <hr></hr>
         <Section
           title="Data Science for Social Good x UK"
-          imageSrc="/images/warwick-logo.png"
+          imageSrc="/images/logos/warwick-logo.png"
           link="https://warwick.ac.uk/research/data-science/warwick-data/dssgx/dssgx2022/"
         >
           <p>
@@ -49,7 +49,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="West Midlands Combined Authority"
-          imageSrc="/images/shared/logos/wmca.png"
+          imageSrc="/images/logos/wmca.png"
           link="https://www.wmca.org.uk/"
         >
           <p>
@@ -61,7 +61,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="Pure Leapfrog"
-          imageSrc="/images/shared/logos/pure-leapfrog.jpg"
+          imageSrc="/images/logos/pure-leapfrog.jpg"
           link="https://www.pureleapfrog.org/"
         >
           <p>

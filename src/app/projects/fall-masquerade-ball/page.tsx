@@ -9,9 +9,18 @@ import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 
 const images = [
-  { src: "/images/projects/fall-masquerade-ball/1.jpg", alt: "Event photo" },
-  { src: "/images/projects/fall-masquerade-ball/2.jpg", alt: "Event photo" },
-  { src: "/images/projects/fall-masquerade-ball/3.jpg", alt: "Event photo" },
+  {
+    src: "/images/projects/fall-masquerade-ball/link-1.jpg",
+    alt: "Event photo",
+  },
+  {
+    src: "/images/projects/fall-masquerade-ball/link-2.jpg",
+    alt: "Event photo",
+  },
+  {
+    src: "/images/projects/fall-masquerade-ball/link-3.jpg",
+    alt: "Event photo",
+  },
 ];
 
 const ProjectContent = () => {
@@ -56,7 +65,7 @@ const ProjectContent = () => {
         </Section>
         <Section
           title="AmongUs"
-          imageSrc="/images/logos/amongus.png"
+          imageSrc="/images/projects/fall-masquerade-ball/amongus.png"
           link="https://amongusatminerva.wixsite.com/amongus"
         >
           <p>

@@ -32,7 +32,7 @@ const ProjectContent = () => {
           out.
         </p>
         <ImageWithCaption
-          src="/images/projects/blind-minervating/process.png"
+          src="/images/projects/blind-minervating/blind-minervating-process.png"
           alt="Workflow for matching people up!"
         ></ImageWithCaption>
         <p>

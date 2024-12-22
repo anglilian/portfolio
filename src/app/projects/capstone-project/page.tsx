@@ -60,7 +60,7 @@ const ProjectContent = () => {
           author="Abstract"
         ></QuoteBox>
         <ImageWithCaption
-          src="/images/projects/capstone/exec-summary.png"
+          src="/images/projects/capstone/capstone-exec-summary.png"
           alt="Capstone executive summary"
         ></ImageWithCaption>
       </section>

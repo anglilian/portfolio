@@ -4,46 +4,59 @@ import "@/app/projects/styles.css"; // Import the stylesheet
 import React from "react";
 import { metadata } from "./metadata";
 
+import { useRouter } from "next/navigation";
+
 import ProjectHeader from "@/components/ProjectHeader";
 import Section from "@/components/Section";
-import ImageWithCaption from "@/components/ImageWithCaption";
 
 const ProjectContent = () => {
+  const router = useRouter();
+
   return (
     <div>
       <ProjectHeader metadata={metadata} />
       <section className="project-section">
         <p>
-          This was the first event I ever organised. As a girl of 15, I stumbled
-          through the world of social impact, constantly reassessing how I might
-          give more, how I might change more.
+          Did you know that the sport from J.K. Rowling&apos;s Harry Potter is a{" "}
+          <a href="https://www.usquidditch.org/about/rules">real game</a> with
+          real rules and{" "}
+          <a href="http://www.usquidditchcup.com/">real competitions?</a> Me
+          neither.
         </p>
         <p>
-          Money was the answer I found back then which led to the charity run.
-          The Leo Club had never organised one in its history, so my team and I
-          paved the way for others to learn the operational steps to look out
-          for.
+          It started off as a thought: how could we advocate for gender equality
+          through an event? Hours of trolling around the internet later, and I
+          learned that Quidditch has team gender ratios which I believed was a
+          good starting point (only to realise later that there is a big
+          <a href="https://edeq.stanford.edu/sections/equality-outcome">
+            difference between equality of opportunity and equality of outcome
+          </a>
+          ).
         </p>
         <p>
-          <strong>250 participants ran to raise MYR2,855</strong> to grant a
-          terminally ill child&apos;s wish to visit Petrosains with his family.
-          The question was what else could I do now?
+          With the help of the Damansara Dementors, a local Quidditch team, we
+          learned the rules and how to build the proper equipment. 120
+          participants attended what turned out to be{" "}
+          <strong>Malaysia&apos;s largest Quidditch tournament</strong>!
         </p>
-        <ImageWithCaption
-          src="/images/projects/leo-quidditch/rftc-shirt.jpg"
-          alt="I designed that shirt!"
-        ></ImageWithCaption>
+        <p>
+          It was one of my first steps to imagining how experiences could be
+          used for advocacy. The outcome was{" "}
+          <strong>MYR1,251 raised for the Women&apos;s Aid Organisation</strong>{" "}
+          and a game enjoyed by all genders. But I don&apos;t believe I could
+          say I was successful on more than that front (at least not yet).
+        </p>
       </section>
       <footer className="project-footer">
         <hr></hr>
         <Section
-          title="Make-A-Wish Malaysia"
-          imageSrc="/images/logos/make-a-wish.jpg"
-          link="https://makeawish.org.my/"
+          title="Women's Aid Organisation"
+          imageSrc="/images/logos/wao.jpg"
+          link="https://wao.org.my/"
         >
           <p>
-            Make-A-Wish is the largest wish-granting organization in the world
-            and can be found in nearly 50 countries around the globe.
+            Our mission is to end violence against women and promote gender
+            equality in Malaysia
           </p>
         </Section>
         <Section

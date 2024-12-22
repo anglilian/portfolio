@@ -13,5 +13,5 @@ export const metadata: ProjectMetadata = {
     },
     { name: "history", category: "education" as SkillCategory },
   ],
-  imageSrc: "/images/projects/hyderabad-walking-tour/hyderabad.png",
+  imageSrc: "/images/projects/hyderabad/hyderabad.png",
 };

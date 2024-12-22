@@ -9,13 +9,15 @@ import ProjectHeader from "@/components/ProjectHeader";
 import ImageGallery from "@/components/ImageGallery";
 
 const images = [
-  { src: "/images/projects/usapps/core.jpeg", alt: "Core committee" },
-  { src: "/images/projects/usapps/alumni-interview.png", alt: "Alumni panel" },
+  { src: "/images/projects/usapps/usapps-core.jpeg", alt: "Core committee" },
   {
-    src: "/images/projects/usapps/killer-essay.jpeg",
+    src: "/images/projects/usapps/usapps-alumni-interview.png",
+    alt: "Alumni panel",
+  },
+  {
+    src: "/images/projects/usapps/usapps-killer-essay.jpeg",
     alt: "Killer essay workshop",
   },
-  // Add more images as needed
 ];
 
 const ProjectContent = () => {
