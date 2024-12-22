@@ -2,13 +2,20 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, // Enable React Strict Mode for better development practices
+  reactStrictMode: true,
 
   images: {
-    domains: ["prod-files-secure.s3.us-west-2.amazonaws.com"], // Replace with your actual domain for images from Notion or other sources
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "anglilian.com",
+      },
+      {
+        protocol: "https",
+        hostname: "prod-files-secure.s3.us-west-2.amazonaws.com",
+      },
+    ],
   },
-
-  // You can add more configurations here as needed
 };
 
 export default nextConfig;

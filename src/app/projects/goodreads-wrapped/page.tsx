@@ -26,9 +26,14 @@ const ProjectContent = () => {
         <p>
           I&apos;ve rebuilt this app several times mostly because I didn&apos;t
           properly plan out my app before I started and I wasn&apos;t properly
-          leveraging AI tools. I intend to write a blog post which details the
-          process and I&apos;ll link it here when that&apos;s up, but for now,
-          please enjoy reflecting on your reading journey for the year!
+          leveraging AI tools. You can read more about the process{" "}
+          <a
+            href="https://anglilian.com/blog/how-to-build-an-interactive-biosecurity-tool-with-minimal-coding-experience"
+            target="_blank"
+          >
+            here
+          </a>
+          !
         </p>
       </section>
     </div>
