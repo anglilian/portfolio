@@ -34,7 +34,10 @@ type PostPageProps = {
   params: { slug: string };
 };
 
-// Use this to fetch all slugs to generate static paths
+// Add static generation
+export const revalidate = 3600;
+
+// Generate static paths at build time
 export async function generateStaticParams() {
   const notionService = new NotionService();
   const posts = await notionService.getPublishedBlogPosts();
