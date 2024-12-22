@@ -12,8 +12,8 @@ export default async function Blog() {
 
   return (
     <main>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-col items-center justify-center">
+      <div className="max-w-xl mx-auto">
+        <div className="flex flex-col items-left justify-center">
           <h1>Blog</h1>
           <article className="prose">
             {posts.map((post: NotionPost) => (

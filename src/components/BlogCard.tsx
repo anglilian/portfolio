@@ -12,11 +12,14 @@ dayjs.extend(localizedFormat);
 
 const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
   return (
-    <div className="flex-row transition duration-300 hover:scale-105 ">
-      <Link href={`/blog/${post.slug}`} className="no-underline">
-        <p>{post.title}</p>
+    <div className="flex-row">
+      <Link
+        href={`/blog/${post.slug}`}
+        className="no-underline hover:no-underline"
+        prefetch={true}
+      >
+        <p className="hover:text-orange-500">{post.title}</p>
       </Link>
-      {/* <span className="text-gray-600">{dayjs(post.date).format("LL")}</span> */}
     </div>
   );
 };
