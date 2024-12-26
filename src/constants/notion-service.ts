@@ -4,94 +4,152 @@ import { NotionToMarkdown } from "notion-to-md";
 import { NotionPost, PostPage } from "@/types/blogs";
 import uploadNotionImagesToCloudinary from "upload-notion-images-to-cloudinary";
 import { revalidatePath } from "next/cache";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import { Options } from "react-markdown";
 
-export default class NotionService {
-  client: Client;
-  n2m: NotionToMarkdown;
+const schema = {
+  ...defaultSchema,
+  tagNames: [...(defaultSchema.tagNames ?? []), "iframe"],
+  attributes: {
+    ...defaultSchema.attributes,
+    iframe: [
+      "src",
+      "width",
+      "height",
+      "frameborder",
+      "allow",
+      "allowfullscreen",
+      "allowtransparency",
+    ],
+  },
+};
 
-  constructor() {
-    this.client = new Client({ auth: process.env.NOTION_TOKEN });
-    this.n2m = new NotionToMarkdown({ notionClient: this.client });
-  }
+export const markdownOptions: Options = {
+  rehypePlugins: [rehypeRaw, [rehypeSanitize, schema], rehypeKatex],
+  remarkPlugins: [remarkGfm, remarkMath],
+};
 
-  async getPublishedBlogPosts(): Promise<NotionPost[]> {
-    const database = process.env.NOTION_DATABASE_ID ?? "";
+function convertMarkdownToEmbed(markdown: string): string {
+  const youtubeEmbedRegex =
+    /\[video\]\((https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+))\)/g;
+  const spotifyEmbedRegex =
+    /\[spotify\]\((https:\/\/open\.spotify\.com\/(track|album|playlist|episode)\/[\w-]+)\)/g;
 
-    const response = await this.client.databases.query({
-      database_id: database,
-      filter: {
-        property: "Published",
-        checkbox: {
-          equals: true,
+  return markdown
+    .replace(youtubeEmbedRegex, (match, url, videoId) => {
+      const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+      return `<div class="relative w-full aspect-video">
+        <iframe class="absolute top-0 left-0 w-full h-full" 
+          src="${embedUrl}" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>`;
+    })
+    .replace(spotifyEmbedRegex, (match, url) => {
+      const embedUrl = url.replace(
+        "open.spotify.com/",
+        "open.spotify.com/embed/"
+      );
+      return `<div class="w-full max-w-[300px] mx-auto">
+        <iframe 
+          src="${embedUrl}" 
+          style="border-radius:12px" 
+          width="100%" 
+          height="380" 
+          frameborder="0" 
+          allowtransparency="true" 
+          allow="encrypted-media">
+        </iframe>
+      </div>`;
+    });
+}
+
+const client = new Client({ auth: process.env.NOTION_TOKEN });
+const n2m = new NotionToMarkdown({ notionClient: client });
+
+function pageToPostTransformer(page: any): NotionPost {
+  return {
+    id: page.id,
+    slug: page.properties.Slug.formula.string,
+    title: page.properties.Name.title[0].plain_text,
+    date: page.properties.Created.formula.date.start,
+  };
+}
+
+export async function getSingleBlogPost(
+  slug: string
+): Promise<PostPage | null> {
+  const database = process.env.NOTION_DATABASE_ID ?? "";
+
+  const response = await client.databases.query({
+    database_id: database,
+    filter: {
+      property: "Slug",
+      formula: {
+        string: {
+          equals: slug,
         },
       },
-      sorts: [
-        {
-          property: "Created",
-          direction: "descending",
-        },
-      ],
-    });
+    },
+  });
 
-    return response.results.map((res) => {
-      return NotionService.pageToPostTransformer(res);
-    });
+  if (!response.results.length) {
+    console.error("No results available for slug:", slug);
+    return null;
   }
 
-  async getSingleBlogPost(slug: string): Promise<PostPage | null> {
-    let post, markdown;
+  const page = response.results[0];
+  const mdBlocks = await n2m.pageToMarkdown(page.id);
+  var markdown = n2m.toMarkdownString(mdBlocks).parent;
+  markdown = convertMarkdownToEmbed(markdown);
 
-    const database = process.env.NOTION_DATABASE_ID ?? "";
+  const post = pageToPostTransformer(page);
 
-    const response = await this.client.databases.query({
-      database_id: database,
-      filter: {
-        property: "Slug",
-        formula: {
-          string: {
-            equals: slug,
-          },
-        },
+  if (!process.env.NOTION_TOKEN || !process.env.CLOUDINARY_URL) {
+    throw new Error("Required environment variables are missing");
+  }
+
+  await uploadNotionImagesToCloudinary({
+    notionToken: process.env.NOTION_TOKEN,
+    notionPageId: page.id,
+    cloudinaryUrl: process.env.CLOUDINARY_URL,
+    cloudinaryUploadFolder: process.env.CLOUDINARY_UPLOAD_FOLDER,
+    logLevel: "debug",
+  });
+
+  revalidatePath(`/blog/${slug}`);
+
+  return {
+    post,
+    markdown,
+  };
+}
+
+export async function getPublishedBlogPosts(): Promise<NotionPost[]> {
+  const database = process.env.NOTION_DATABASE_ID ?? "";
+
+  const response = await client.databases.query({
+    database_id: database,
+    filter: {
+      property: "Published",
+      checkbox: {
+        equals: true,
       },
-    });
+    },
+    sorts: [
+      {
+        property: "Created",
+        direction: "descending",
+      },
+    ],
+  });
 
-    if (!response.results.length) {
-      console.error("No results available for slug:", slug);
-      return null; // Return null if no results are found
-    }
-
-    const page = response.results[0];
-    const mdBlocks = await this.n2m.pageToMarkdown(page.id);
-    markdown = this.n2m.toMarkdownString(mdBlocks).parent;
-
-    post = NotionService.pageToPostTransformer(page);
-
-    if (!process.env.NOTION_TOKEN || !process.env.CLOUDINARY_URL) {
-      throw new Error("Required environment variables are missing");
-    }
-
-    await uploadNotionImagesToCloudinary({
-      notionToken: process.env.NOTION_TOKEN,
-      notionPageId: page.id,
-      cloudinaryUrl: process.env.CLOUDINARY_URL,
-      cloudinaryUploadFolder: process.env.CLOUDINARY_UPLOAD_FOLDER,
-      logLevel: "debug",
-    });
-
-    revalidatePath(`/blog/${slug}`);
-
-    return {
-      post,
-      markdown,
-    };
-  }
-
-  private static pageToPostTransformer(page: any): NotionPost {
-    return {
-      id: page.id,
-      slug: page.properties.Slug.formula.string,
-      title: page.properties.Name.title[0].plain_text,
-      date: page.properties.Created.formula.date.start,
-    };
-  }
+  return response.results.map((res) => {
+    return pageToPostTransformer(res);
+  });
 }

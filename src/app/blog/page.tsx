@@ -1,14 +1,13 @@
 // src/app/blog/page.tsx
 import BlogCard from "@/components/BlogCard";
-import NotionService from "@/constants/notion-service";
+import { getPublishedBlogPosts } from "@/constants/notion-service";
 import { NotionPost } from "@/types/blogs";
 
 // This enables ISR - page will be revalidated every hour
 export const revalidate = 3600; // seconds
 
 export default async function Blog() {
-  const notionService = new NotionService();
-  const posts: NotionPost[] = await notionService.getPublishedBlogPosts();
+  const posts: NotionPost[] = await getPublishedBlogPosts();
 
   return (
     <main>
