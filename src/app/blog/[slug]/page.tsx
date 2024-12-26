@@ -1,7 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { getSingleBlogPost, markdownOptions } from "@/constants/notion-service";
+import {
+  getSingleBlogPost,
+  markdownOptions,
+  getAllBlogSlugs,
+} from "@/constants/notion-service";
 import dayjs from "dayjs";
 import NextPostNavigation from "@/components/NextPostNavigation";
 
@@ -9,8 +13,17 @@ type PostPageProps = {
   params: { slug: string };
 };
 
-// Add static generation
-export const revalidate = 3600;
+// Add these static generation functions
+export async function generateStaticParams() {
+  const slugs = await getAllBlogSlugs();
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
+
+// Change revalidate to false if you want to only rebuild on deployment
+// Or keep a value (in seconds) if you want incremental static regeneration
+export const revalidate = false;
 
 export default async function PostPage({ params }: PostPageProps) {
   const postData = await getSingleBlogPost(params.slug);

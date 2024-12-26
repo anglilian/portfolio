@@ -153,3 +153,18 @@ export async function getPublishedBlogPosts(): Promise<NotionPost[]> {
     return pageToPostTransformer(res);
   });
 }
+
+export async function getAllBlogSlugs(): Promise<string[]> {
+  const database = process.env.NOTION_DATABASE_ID ?? "";
+  const response = await client.databases.query({
+    database_id: database,
+    filter: {
+      property: "Published",
+      checkbox: {
+        equals: true,
+      },
+    },
+  });
+
+  return response.results.map((page) => pageToPostTransformer(page).slug);
+}
