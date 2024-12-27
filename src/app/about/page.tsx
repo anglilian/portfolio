@@ -13,11 +13,11 @@ export default function About() {
             <p>
               I started working at{" "}
               <a href="https://bluedot.org">BlueDot Impact</a> in November 2022
-              and am now a<strong> Product Manager</strong>. I&apos;ve built the{" "}
+              and am now a<strong> Product Manager</strong>. I've built the{" "}
               <a href="https://course.aisafetyfundamentals.com/alignment">
                 Course Hub
               </a>{" "}
-              (BlueDot&apos;s learning management system), designed facilitator
+              (BlueDot's learning management system), designed facilitator
               training, launched digital marketing campaigns, automated internal
               workflows and an assortment of other tasks to help scale the
               impact of our course participants.
@@ -35,9 +35,9 @@ export default function About() {
               <a href="https://minerva.edu">Minerva University</a> in 2022 with
               a double major in
               <strong> Data Science & Statistics</strong> and
-              <strong> Historical Forces</strong>. It&apos;s a pretty neat
-              university where I got to travel, live, and work in 5 different
-              countries during my undergraduate degree!
+              <strong> Historical Forces</strong>. It's a pretty neat university
+              where I got to travel, live, and work in 5 different countries
+              during my undergraduate degree!
             </p>
           </div>
         </section>
@@ -54,11 +54,11 @@ export default function About() {
               friends.
             </p>
             <p>
-              Since I moved to the UK, I&apos;ve been training BJJ with{" "}
+              Since I moved to the UK, I've been training BJJ with{" "}
               <a href="https://www.bjjlondon.com/">Carlson Gracie London</a>{" "}
-              (oss!) to learn how to operate under pressure and because
-              I&apos;ve always wanted to praactice martial arts. My goal for
-              2024 is to compete twice!
+              (oss!) to learn how to operate under pressure and because I've
+              always wanted to praactice martial arts. My goal for 2024 is to
+              compete twice!
             </p>
           </div>
         </section>
