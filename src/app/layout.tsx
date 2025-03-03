@@ -7,7 +7,31 @@ import { CSPostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "Ang Li-Lian",
-  description: "Ang Li-Lian's portfolio",
+  description:
+    "I hope to leave the world a better place than I found it and build delightful, useful experiences along the way.",
+  openGraph: {
+    title: "Ang Li-Lian - Portfolio",
+    description:
+      "I hope to leave the world a better place than I found it and build delightful, useful experiences along the way.",
+    type: "website",
+    url: "https://anglilian.com",
+    siteName: "Ang Li-Lian",
+    images: [
+      {
+        url: "/images/me.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ang Li-Lian",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ang Li-Lian - Portfolio",
+    description:
+      "I hope to leave the world a better place than I found it and build delightful, useful experiences along the way.",
+    images: ["/images/me.jpg"],
+  },
 };
 
 export default function RootLayout({
