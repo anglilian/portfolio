@@ -17,7 +17,7 @@ export default function About() {
               <a href="https://course.aisafetyfundamentals.com/alignment">
                 Course Hub
               </a>{" "}
-              (BlueDot's learning management system), designed facilitator
+              (BlueDot's custom learning platform), designed facilitator
               training, launched digital marketing campaigns, automated internal
               workflows and an assortment of other tasks to help scale the
               impact of our course participants.
@@ -48,17 +48,10 @@ export default function About() {
           </div>
           <div className="w-3/4 space-y-2">
             <p>
-              I did long distance running while I was in school. Then focused on
-              yoga everyday for 6 months (now I can touch my toes!). Towards the
-              end of uni, I bouldered for two years to build strength and make
-              friends.
-            </p>
-            <p>
-              Since I moved to the UK, I've been training BJJ with{" "}
-              <a href="https://www.bjjlondon.com/">Carlson Gracie London</a>{" "}
-              (oss!) to learn how to operate under pressure and because I've
-              always wanted to praactice martial arts. My goal for 2024 is to
-              compete twice!
+              My fitness journey evolved from competitively running long
+              distance, to dedicated yoga practice, to bouldering. Since moving
+              to the UK, I've been training BJJ - a sport and community I feel
+              at home in.
             </p>
           </div>
         </section>
