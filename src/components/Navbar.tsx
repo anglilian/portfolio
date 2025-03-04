@@ -97,18 +97,6 @@ const Navbar = () => {
               Blog
             </Link>
           </li>
-          <li className="md:hidden py-2">
-            <Link
-              href="/about"
-              className={classNames("nav-link block text-center", {
-                "text-black": pathname === "/about",
-                "text-gray-400": pathname !== "/about",
-              })}
-              onClick={closeNavbar}
-            >
-              About
-            </Link>
-          </li>
           <li className="hidden md:block">
             <Link
               href="/"
@@ -140,17 +128,6 @@ const Navbar = () => {
               })}
             >
               Blog
-            </Link>
-          </li>
-          <li className="hidden md:block">
-            <Link
-              href="/about"
-              className={classNames("nav-link", {
-                "text-black": pathname === "/about",
-                "text-gray-400": pathname !== "/about",
-              })}
-            >
-              About
             </Link>
           </li>
         </ul>
