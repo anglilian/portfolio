@@ -1,31 +1,33 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import ProjectBox from "@/components/ProjectBox";
 import { metadata as purpleShroudMetadata } from "./projects/purple-is-the-noblest-shroud/metadata";
 import { metadata as humansOfMinervaMetadata } from "./projects/humans-of-minerva/metadata";
 import { metadata as goodreadsWrappedMetadata } from "./projects/goodreads-wrapped/metadata";
 import BlogShowcase from "@/components/BlogShowcase";
 import Footer from "@/components/Footer";
+import Link from "next/link";
+
 export default function Home() {
-  const router = useRouter();
-
-  const [imageSrc, setImageSrc] = useState("/images/me.jpg");
-
   return (
     <div className="flex flex-col flex-grow justify-center items-center overflow-hidden space-y-4">
       <div className="flex flex-col md:flex-row items-center p-6 pb-6">
-        <div className="relative w-56 h-56 flex-shrink-0">
+        <div className="relative w-56 h-56 flex-shrink-0 profile-image-container">
           <Image
-            src={imageSrc}
+            src="/images/me.jpg"
             alt="Me!"
             layout="fill"
             objectFit="cover"
-            className="rounded-full shadow-lg"
-            onMouseEnter={() => setImageSrc("/images/me-fun.jpg")}
-            onMouseLeave={() => setImageSrc("/images/me.jpg")}
+            className="rounded-full shadow-lg profile-image profile-image-main"
+            priority
+          />
+          <Image
+            src="/images/me-fun.jpg"
+            alt="Me fun!"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full shadow-lg profile-image profile-image-fun opacity-0 absolute top-0"
+            priority
           />
         </div>
         <div className="flex-grow p-8 space-y-4 text-center md:text-left">
@@ -74,12 +76,12 @@ export default function Home() {
             </div>
           </div>
 
-          <button
-            className="text-white border-2 border-white rounded-full px-4 py-2 hover:bg-white hover:text-orange-600 transition-colors text-sm mt-8 mb-8"
-            onClick={() => router.push("/projects")}
+          <Link
+            href="/projects"
+            className="text-white border-2 border-white rounded-full px-4 py-2 hover:bg-white hover:text-orange-600 transition-colors text-sm my-8 hover:no-underline"
           >
             see more
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -91,12 +93,14 @@ export default function Home() {
           <div className="md:w-3/4 space-y-8 mt-4">
             <div className="w-full h-0.5 bg-orange-600"></div>
             <BlogShowcase />
-            <button
-              className="text-orange-600 border-2 border-orange-600 rounded-full px-4 py-2 hover:bg-orange-600 hover:text-white transition-colors text-sm mt-8 mb-8"
-              onClick={() => router.push("/blog")}
-            >
-              see more
-            </button>
+            <div className="my-8">
+              <Link
+                href="/blog"
+                className="text-orange-600 border-2 border-orange-600 rounded-full px-4 py-2 hover:bg-orange-600 hover:text-white transition-colors text-sm hover:no-underline"
+              >
+                see more
+              </Link>
+            </div>
           </div>
         </div>
       </div>
