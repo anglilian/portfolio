@@ -54,7 +54,10 @@ export default function Home() {
                 title={goodreadsWrappedMetadata.title}
                 startDate={goodreadsWrappedMetadata.startDate}
                 skills={goodreadsWrappedMetadata.skills}
-                imageSrc={goodreadsWrappedMetadata.bannerImage}
+                imageSrc={
+                  goodreadsWrappedMetadata.bannerImage ||
+                  goodreadsWrappedMetadata.imageSrc
+                }
                 slug={goodreadsWrappedMetadata.slug}
               />
               <ProjectBox
