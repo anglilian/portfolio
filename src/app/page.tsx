@@ -54,24 +54,21 @@ export default function Home() {
                 title={goodreadsWrappedMetadata.title}
                 startDate={goodreadsWrappedMetadata.startDate}
                 skills={goodreadsWrappedMetadata.skills}
-                imageSrc={
-                  goodreadsWrappedMetadata.bannerImage ||
-                  goodreadsWrappedMetadata.imageSrc
-                }
+                imageSrc={goodreadsWrappedMetadata.imageSrc}
                 slug={goodreadsWrappedMetadata.slug}
               />
               <ProjectBox
                 title={purpleShroudMetadata.title}
                 startDate={purpleShroudMetadata.startDate}
                 skills={purpleShroudMetadata.skills}
-                imageSrc={purpleShroudMetadata.bannerImage}
+                imageSrc={purpleShroudMetadata.imageSrc}
                 slug={purpleShroudMetadata.slug}
               />
               <ProjectBox
                 title={humansOfMinervaMetadata.title}
                 startDate={humansOfMinervaMetadata.startDate}
                 skills={humansOfMinervaMetadata.skills}
-                imageSrc={humansOfMinervaMetadata.bannerImage}
+                imageSrc={humansOfMinervaMetadata.imageSrc}
                 slug={humansOfMinervaMetadata.slug}
               />
             </div>
