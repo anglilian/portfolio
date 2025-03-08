@@ -16,14 +16,6 @@ export default async function Blog() {
       <div className="max-w-xl mx-auto p-6">
         <div className="flex flex-col items-left justify-center">
           <h1>Blog</h1>
-          <div className="my-8">
-            <Link
-              href="/"
-              className="text-orange-600 border-2 border-orange-600 rounded-full px-4 py-2 hover:bg-orange-600 hover:text-white transition-colors text-sm hover:no-underline"
-            >
-              home
-            </Link>
-          </div>
           <article className="prose">
             {posts.map((post: NotionPost) => (
               <BlogCard key={post.id} post={post}></BlogCard>
