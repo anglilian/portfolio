@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -8,8 +9,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const maxWidthClass =
     usePathname() === "/projects" ? "max-w-6xl" : "max-w-4xl";
   return (
-    <div className="min-h-screen flex flex-col items-center">
+    <div className="min-h-screen flex flex-col items-center p-6">
       <div className={`${maxWidthClass} w-full space-y-8`}>{children}</div>
+      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
 } from "@/constants/notion-service";
 import dayjs from "dayjs";
 import NextPostNavigation from "@/components/NextPostNavigation";
+import Footer from "@/components/Footer";
 
 type PostPageProps = {
   params: { slug: string };
@@ -38,7 +39,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const formattedDate = dayjs(post.date).format("MMM D, YYYY");
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen p-6">
       <main className="max-w-4xl mx-auto relative">
         <div className="flex flex-col items-center justify-center space-y-8 ">
           <article className="prose">
@@ -49,6 +50,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <NextPostNavigation currentSlug={params.slug} />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

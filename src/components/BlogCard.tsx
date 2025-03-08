@@ -18,7 +18,9 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
         className="no-underline hover:no-underline"
         prefetch={true}
       >
-        <p className="hover:text-orange-500">{post.title}</p>
+        <p className="text-black hover:text-orange-500 transition-colors">
+          {post.title}
+        </p>
       </Link>
     </div>
   );

@@ -8,9 +8,13 @@ interface IconRowProps {
     link: string;
     alt: string;
   }[];
+  iconColor?: string;
 }
 
-const IconRow: React.FC<IconRowProps> = ({ icons }) => {
+const IconRow: React.FC<IconRowProps> = ({
+  icons,
+  iconColor = "text-gray-600",
+}) => {
   return (
     <div className="flex space-x-4 justify-center">
       {icons.map((item, index) => (
@@ -22,11 +26,7 @@ const IconRow: React.FC<IconRowProps> = ({ icons }) => {
           title={item.alt}
           className="flex justify-center items-center w-10 h-10 rounded-full transition duration-300 hover:scale-110"
         >
-          <FontAwesomeIcon
-            icon={item.icon}
-            size="2x"
-            className="text-gray-600"
-          />
+          <FontAwesomeIcon icon={item.icon} size="2x" className={iconColor} />
         </a>
       ))}
     </div>

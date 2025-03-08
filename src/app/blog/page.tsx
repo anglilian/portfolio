@@ -1,5 +1,6 @@
 // src/app/blog/page.tsx
 import BlogCard from "@/components/BlogCard";
+import Footer from "@/components/Footer";
 import { getPublishedBlogPosts } from "@/constants/notion-service";
 import { NotionPost } from "@/types/blogs";
 
@@ -11,7 +12,7 @@ export default async function Blog() {
 
   return (
     <main>
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-xl mx-auto p-6">
         <div className="flex flex-col items-left justify-center">
           <h1>Blog</h1>
           <article className="prose">
@@ -21,6 +22,7 @@ export default async function Blog() {
           </article>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

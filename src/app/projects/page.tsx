@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
             slug={item.slug}
           />
         ))}
-      </div>
+      </div>{" "}
     </div>
   );
 };

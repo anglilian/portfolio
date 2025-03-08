@@ -152,3 +152,34 @@ export async function getAllBlogSlugs(): Promise<string[]> {
 
   return response.results.map((page) => pageToPostTransformer(page).slug);
 }
+
+export async function getBlogPostsBySlugs(
+  slugs: string[]
+): Promise<NotionPost[]> {
+  const database = process.env.NOTION_DATABASE_ID ?? "";
+  const response = await client.databases.query({
+    database_id: database,
+    filter: {
+      and: [
+        {
+          property: "Published",
+          checkbox: {
+            equals: true,
+          },
+        },
+        {
+          or: slugs.map((slug) => ({
+            property: "Slug",
+            formula: {
+              string: {
+                equals: slug,
+              },
+            },
+          })),
+        },
+      ],
+    },
+  });
+
+  return response.results.map((page) => pageToPostTransformer(page));
+}

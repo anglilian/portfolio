@@ -49,8 +49,8 @@ const ProjectBox: React.FC<ProjectMetadata> = ({
           />
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="absolute inset-0 flex flex-col justify-end p-6">
-            <h2 className="font-bold text-2xl text-white">{title}</h2>
-            <div className="flex-wrap flex space-x-4 text-gray-300 text-lg">
+            <h2 className="font-bold text-xl text-white">{title}</h2>
+            <div className="flex-wrap flex space-x-4 text-gray-300 text-sm">
               <p>
                 {formattedStartDate}
                 {formattedEndDate && ` - ${formattedEndDate}`}

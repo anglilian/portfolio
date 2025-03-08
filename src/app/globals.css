@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 248, 248, 237;
   --primary-rgb: 255, 69, 0;
+  --text-orange-600: rgb(234, 88, 12);
 }
 
 body {
