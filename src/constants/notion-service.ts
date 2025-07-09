@@ -76,6 +76,7 @@ function pageToPostTransformer(page: any): NotionPost {
     slug: page.properties.Slug.formula.string,
     title: page.properties.Name.title[0].plain_text,
     date: page.properties.Created.formula.date.start,
+    externalLink: page.properties["External URL"]?.url || undefined,
   };
 }
 

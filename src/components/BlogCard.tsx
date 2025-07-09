@@ -11,15 +11,23 @@ const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
 const BlogCard: FunctionComponent<BlogCardProps> = ({ post }) => {
+  const href = post.externalLink || `/blog/${post.slug}`;
+  const isExternal = !!post.externalLink;
+
   return (
     <div className="flex-row">
       <Link
-        href={`/blog/${post.slug}`}
+        href={href}
         className="no-underline hover:no-underline"
-        prefetch={true}
+        prefetch={!isExternal}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
       >
         <p className="text-black hover:text-orange-500 transition-colors">
           {post.title}
+          {isExternal && (
+            <span className="ml-1 text-xs text-gray-500">↗</span>
+          )}
         </p>
       </Link>
     </div>

@@ -2,9 +2,9 @@ import { getBlogPostsBySlugs } from "@/constants/notion-service";
 import BlogCard from "./BlogCard";
 
 const FEATURED_POST_SLUGS = [
-  "from-80-to-60-why-i-slowed-down-my-reading-speed",
+  "ai-safety-needs-more-public-facing-advocacy",
   "i-wrote-3000-words-a-day-for-35-days",
-  "why-we-spent-3-months-building-our-own-learning-platform-instead-of-using-one-off-the-shelf",
+  "i-got-my-blue-belt-and-i-cant-stop-smiling",
 ];
 
 export default async function BlogShowcase() {
