@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Leaf Typography",
   slug: "leaf-typography",
-  startDate: new Date("April 2018"),
+  startDate: new Date("2018-04-01"),
   location: "San Francisco",
   role: "Illustrator",
   skills: [

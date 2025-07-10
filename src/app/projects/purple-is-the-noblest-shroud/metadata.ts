@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Purple is the Noblest Shroud",
   slug: "purple-is-the-noblest-shroud",
-  startDate: new Date("April 2021"),
+  startDate: new Date("2021-04-01"),
   role: "Self-published authour",
   skills: [
     { name: "Historical fiction", category: "writing" as SkillCategory },

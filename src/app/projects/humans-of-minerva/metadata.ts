@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Humans of Minerva",
   slug: "humans-of-minerva",
-  startDate: new Date("January 2022"),
+  startDate: new Date("2022-01-01"),
   endDate: "Present",
   role: "Lead editor",
   skills: [{ name: "Podcast editting", category: "creative" as SkillCategory }],

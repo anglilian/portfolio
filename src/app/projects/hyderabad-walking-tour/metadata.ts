@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Hyderabad Historical Walking Tour",
   slug: "hyderabad-walking-tour",
-  startDate: new Date("April 2020"),
+  startDate: new Date("2020-04-01"),
   location: "India",
   skills: [
     {

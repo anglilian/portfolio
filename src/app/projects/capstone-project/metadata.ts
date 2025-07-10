@@ -4,8 +4,8 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "How to Rewrite Malaysian History",
   slug: "capstone-project",
-  startDate: new Date("July 2021"),
-  endDate: new Date("April 2022"),
+  startDate: new Date("2021-07-01"),
+  endDate: new Date("2022-04-01"),
   role: "Capstone Project",
   skills: [
     {

@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Textual Analysis with Taylor Swift & Old Books",
   slug: "text-analysis",
-  startDate: new Date("May 2021"),
+  startDate: new Date("2021-05-01"),
   skills: [
     {
       name: "nltk, webscraping, R",
