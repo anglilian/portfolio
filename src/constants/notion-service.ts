@@ -32,6 +32,11 @@ export const markdownOptions: Options = {
 };
 
 function convertMarkdownToEmbed(markdown: string): string {
+  // Add null/undefined check
+  if (!markdown || typeof markdown !== 'string') {
+    return '';
+  }
+
   const youtubeEmbedRegex =
     /\[video\]\((https:\/\/(?:www\.youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+))\)/g;
   const spotifyEmbedRegex =
@@ -73,10 +78,10 @@ const n2m = new NotionToMarkdown({ notionClient: client });
 function pageToPostTransformer(page: any): NotionPost {
   return {
     id: page.id,
-    slug: page.properties.Slug.formula.string,
-    title: page.properties.Name.title[0].plain_text,
-    date: page.properties.Created.formula.date.start,
-    externalLink: page.properties["External URL"]?.url || undefined,
+    slug: page.properties?.Slug?.formula?.string || '',
+    title: page.properties?.Name?.title?.[0]?.plain_text || 'Untitled',
+    date: page.properties?.Created?.formula?.date?.start || new Date().toISOString(),
+    externalLink: page.properties?.["External URL"]?.url || undefined,
   };
 }
 
@@ -104,14 +109,14 @@ export async function getSingleBlogPost(
 
   const page = response.results[0];
   const mdBlocks = await n2m.pageToMarkdown(page.id);
-  var markdown = n2m.toMarkdownString(mdBlocks).parent;
+  var markdown = n2m.toMarkdownString(mdBlocks)?.parent || '';
   markdown = convertMarkdownToEmbed(markdown);
 
   const post = pageToPostTransformer(page);
 
   return {
     post,
-    markdown,
+    markdown: markdown || '',
   };
 }
 
@@ -134,9 +139,11 @@ export async function getPublishedBlogPosts(): Promise<NotionPost[]> {
     ],
   });
 
-  return response.results.map((res) => {
-    return pageToPostTransformer(res);
-  });
+  return response.results
+    .filter((res) => res && res.id) // Filter out invalid results
+    .map((res) => {
+      return pageToPostTransformer(res);
+    });
 }
 
 export async function getAllBlogSlugs(): Promise<string[]> {
@@ -151,7 +158,10 @@ export async function getAllBlogSlugs(): Promise<string[]> {
     },
   });
 
-  return response.results.map((page) => pageToPostTransformer(page).slug);
+  return response.results
+    .filter((page) => page && page.id) // Filter out invalid results
+    .map((page) => pageToPostTransformer(page).slug)
+    .filter((slug) => slug); // Filter out empty slugs
 }
 
 export async function getBlogPostsBySlugs(
@@ -182,5 +192,7 @@ export async function getBlogPostsBySlugs(
     },
   });
 
-  return response.results.map((page) => pageToPostTransformer(page));
+  return response.results
+    .filter((page) => page && page.id) // Filter out invalid results
+    .map((page) => pageToPostTransformer(page));
 }
