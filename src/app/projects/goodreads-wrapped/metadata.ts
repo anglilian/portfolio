@@ -4,7 +4,7 @@ import { ProjectMetadata } from "@/types/projects";
 export const metadata: ProjectMetadata = {
   title: "Goodreads Wrapped",
   slug: "goodreads-wrapped",
-  startDate: new Date("December 2024"),
+  startDate: new Date("2024-12-01"),
   skills: [
     { name: "Next.js, TypeScript", category: "coding" as SkillCategory },
   ],
