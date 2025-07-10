@@ -108,7 +108,7 @@ export default function Home() {
       <div className="w-full bg-orange-600 p-6 flex flex-col items-center pt-12">
         <div className="max-w-2xl mb-12">
           <h2 className="text-4xl font-bold text-white text-center">
-            hopefully, I leave the world a little better than I found it
+            i'm committed to building a better world, one day at a time
           </h2>
         </div>
         <Footer />
