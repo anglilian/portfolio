@@ -1,5 +1,13 @@
 .project-section {
-  @apply py-10 container mx-auto space-y-6;
+  @apply py-10 mx-auto space-y-6 max-w-4xl px-6;
+}
+
+.project-section p {
+  @apply leading-relaxed mb-6;
+}
+
+.project-section a {
+  @apply break-words;
 }
 
 .project-footer {
