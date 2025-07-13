@@ -31,7 +31,7 @@ const Section: React.FC<SectionProps> = ({
           "md:flex-row-reverse": imagePosition === "right",
         })}
       >
-        <div className="relative w-full h-48 md:h-auto md:w-1/4 max-w-[40%] flex-shrink-0 mb-4 md:mb-0">
+        <div className="relative w-full h-32 md:h-auto md:w-1/6 max-w-[25%] flex-shrink-0 mb-4 md:mb-0">
           <div className="absolute inset-0 flex items-center justify-center">
             {link ? (
               <Link href={link}>

@@ -45,13 +45,7 @@ const ProjectContent = () => {
         <IconRow icons={icons} />
 
         <QuoteBox
-          quote="
-
-Theodora’s life was laid out for her generations before she was born. She would act on the stage until she was no longer beautiful enough and birth daughters who would do exactly as she had. Then, Theodora makes a decision to pursue freedom far from Constantinople. She runs from her fate and stumbles into the arms of the most powerful man in the empire — Emperor Justinian.
-
-But the imperial court is no place for a woman from the lowest rungs of society. She had been legally barred from leaving the theatre or marrying any man of rank. Yet, she left behind a legacy as the champion of the fallen and the mother of the empire.
-
-How did she do it?"
+          quote="Theodora’s life was laid out for her generations before she was born. She would act on the stage until she was no longer beautiful enough and birth daughters who would do exactly as she had. Then, Theodora makes a decision to pursue freedom far from Constantinople. She runs from her fate and stumbles into the arms of the most powerful man in the empire — Emperor Justinian. But the imperial court is no place for a woman from the lowest rungs of society. She had been legally barred from leaving the theatre or marrying any man of rank. Yet, she left behind a legacy as the champion of the fallen and the mother of the empire. How did she do it?"
         />
         <p>
           In the summer of 2020 when COVID-19 hit, I was cloistered at home with
@@ -109,8 +103,7 @@ How did she do it?"
           On April 24th 2021, a year after I started along this journey, I
           became a published author with almost 200 copies sold to date. It is a
           modest number for a first-time author, but I miss the research, the
-          writing, the crafting and you can bet there&apos;s going to be a
-          sequel!
+          writing, the crafting and have strongly considered a sequel!
         </p>
       </section>
     </div>
