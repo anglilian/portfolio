@@ -21,7 +21,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ metadata }) => {
         <BackButton />
       </div>
       <div className="flex flex-row flex-wrap">
-        <p className="text-gray-500 uppercase text-sm md:text-lg tracking-wide font-light">
+        <p className="text-gray-500 uppercase text-xs md:text-sm tracking-wide font-light">
           {metadata.title && `${metadata.title}`}
           {metadata.role && (
             <>
