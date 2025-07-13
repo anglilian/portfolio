@@ -1,13 +1,15 @@
 .project-section {
-  @apply py-10 mx-auto space-y-6 max-w-4xl px-6;
-}
-
-.project-section p {
-  @apply leading-relaxed mb-6;
+  @apply py-10 mx-auto space-y-6 max-w-4xl px-6 prose;
 }
 
 .project-section a {
-  @apply break-words;
+  color: rgba(var(--primary-rgb));
+  text-decoration: none;
+}
+
+.project-section a:hover {
+  color: rgba(var(--primary-rgb), 0.8);
+  text-decoration: underline;
 }
 
 .project-footer {

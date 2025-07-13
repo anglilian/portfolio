@@ -38,14 +38,11 @@ const ProjectContent = () => {
           imageSrc="/images/logos/minerva.png"
         >
           <p>
-            Minerva University strives to develop problem-solvers,
-            entrepreneurs, and wise leaders from around the globe; and weave
-            them together as one community to address the greatest challenges
-            facing humanity. Our undergraduate students come together as future
-            leaders and entrepreneurs from 100 nations to live and learn
-            together in multiple culturally vibrant cities around the world over
-            four years of study with a shared goal in mind to contribute to a
-            safer, more sustainable world.
+            Minerva University unites undergraduate students from 100 nations who
+            live and learn together across multiple global cities over four years,
+            developing them as problem-solving leaders and entrepreneurs
+            committed to addressing humanity&apos;s greatest challenges and
+            building a safer, more sustainable world.
           </p>
         </Section>
       </footer>

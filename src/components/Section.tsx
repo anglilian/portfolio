@@ -31,7 +31,7 @@ const Section: React.FC<SectionProps> = ({
           "md:flex-row-reverse": imagePosition === "right",
         })}
       >
-        <div className="relative w-full h-64 md:h-auto md:w-1/3 max-w-[60%] flex-shrink-0 mb-4 md:mb-0">
+        <div className="relative w-full h-48 md:h-auto md:w-1/4 max-w-[40%] flex-shrink-0 mb-4 md:mb-0">
           <div className="absolute inset-0 flex items-center justify-center">
             {link ? (
               <Link href={link}>
@@ -40,7 +40,7 @@ const Section: React.FC<SectionProps> = ({
                   alt={title}
                   layout="fill"
                   objectFit="contain"
-                  sizes="(max-width: 100px) 100vw, 50vw"
+                  sizes="(max-width: 80px) 100vw, 40vw"
                 />
               </Link>
             ) : (
@@ -54,8 +54,8 @@ const Section: React.FC<SectionProps> = ({
           </div>
         </div>
         <div className="flex-grow space-y-2 p-4 md:p-8">
-          <h2 className={`text-2xl font-bold ${titleColor}`}>{title}</h2>
-          <div className={fontSize === "lg" ? "text-lg" : "text-sm"}>
+          <h2 className={`text-xl font-semibold ${titleColor || "text-gray-400"}`}>{title}</h2>
+          <div className={`${fontSize === "lg" ? "text-base text-gray-600" : "text-xs text-gray-500"}`}>
             {children}
           </div>
         </div>
