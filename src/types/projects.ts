@@ -12,4 +12,5 @@ export interface ProjectMetadata {
   link?: string;
   linkLabel?: string;
   role?: string;
+  isFeatured?: boolean;
 }

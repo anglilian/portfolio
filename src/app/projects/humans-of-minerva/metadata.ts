@@ -12,4 +12,5 @@ export const metadata: ProjectMetadata = {
   linkLabel: "Listen to the podcast",
   bannerImage: "/images/projects/humans-of-minerva/hom-banner.png",
   imageSrc: "/images/projects/humans-of-minerva/humans-of-minerva.png",
+  isFeatured: true,
 };

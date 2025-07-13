@@ -12,4 +12,5 @@ export const metadata: ProjectMetadata = {
   bannerImage: "/images/projects/goodreads-wrapped/goodreads-wrapped.png",
   link: "https://goodreads-wrapped.anglilian.com/",
   linkLabel: "Try it out!",
+  isFeatured: true,
 };

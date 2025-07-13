@@ -14,4 +14,5 @@ export const metadata: ProjectMetadata = {
   bannerImage: "/images/projects/purple-is-the-noblest-shroud/book-banner.png",
   link: "https://www.amazon.com/dp/9671942709",
   linkLabel: "Get your copy",
+  isFeatured: true,
 };

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import ProjectShowcase from "@/components/ProjectShowcase";
 import ProjectBox from "@/components/ProjectBox";
 import FilterButtons from "@/components/FilterButtons";
 import { SkillCategory, skillCategoryValues } from "@/constants/skillColours";
@@ -90,6 +91,20 @@ const Projects: React.FC = () => {
     (a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
   );
 
+  // If no category is selected or "all" is selected, use ProjectShowcase
+  if (selectedCategory === "all") {
+    return (
+      <div>
+        <FilterButtons
+          selectedCategory={selectedCategory}
+          onCategoryClick={handleCategoryClick}
+        />
+        <ProjectShowcase />
+      </div>
+    );
+  }
+
+  // For filtered categories, render the filtered projects manually
   return (
     <div>
       <FilterButtons
@@ -109,7 +124,7 @@ const Projects: React.FC = () => {
             slug={item.slug}
           />
         ))}
-      </div>{" "}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ProjectBox from "@/components/ProjectBox";
-import { metadata as purpleShroudMetadata } from "./projects/purple-is-the-noblest-shroud/metadata";
-import { metadata as humansOfMinervaMetadata } from "./projects/humans-of-minerva/metadata";
-import { metadata as goodreadsWrappedMetadata } from "./projects/goodreads-wrapped/metadata";
+import ProjectShowcase from "@/components/ProjectShowcase";
 import BlogShowcase from "@/components/BlogShowcase";
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -51,29 +48,7 @@ export default function Home() {
               <div className="w-full h-0.5 bg-white"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <ProjectBox
-                title={goodreadsWrappedMetadata.title}
-                startDate={goodreadsWrappedMetadata.startDate}
-                skills={goodreadsWrappedMetadata.skills}
-                imageSrc={goodreadsWrappedMetadata.imageSrc}
-                slug={goodreadsWrappedMetadata.slug}
-              />
-              <ProjectBox
-                title={purpleShroudMetadata.title}
-                startDate={purpleShroudMetadata.startDate}
-                skills={purpleShroudMetadata.skills}
-                imageSrc={purpleShroudMetadata.imageSrc}
-                slug={purpleShroudMetadata.slug}
-              />
-              <ProjectBox
-                title={humansOfMinervaMetadata.title}
-                startDate={humansOfMinervaMetadata.startDate}
-                skills={humansOfMinervaMetadata.skills}
-                imageSrc={humansOfMinervaMetadata.imageSrc}
-                slug={humansOfMinervaMetadata.slug}
-              />
-            </div>
+            <ProjectShowcase featuredOnly={true} maxProjects={3} />
           </div>
 
           <Link
