@@ -5,7 +5,7 @@ export const metadata: ProjectMetadata = {
   title: "Humans of Minerva",
   slug: "humans-of-minerva",
   startDate: new Date("2022-01-01"),
-  endDate: "Present",
+  endDate: new Date("2025-05-01"),
   role: "Lead editor",
   skills: [{ name: "Podcast editting", category: "creative" as SkillCategory }],
   link: "https://anchor.fm/humans-of-minerva/",
